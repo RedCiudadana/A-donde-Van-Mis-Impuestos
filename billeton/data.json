@@ -8,5 +8,10 @@
         "funcionario": "Fulanito Mengano",
         "ingresos_mensuales": "1515",
         "puesto": "wawa"
+    },
+    {
+        "funcionario": "Julito Herrera",
+        "ingresos_mensuales": "1235",
+        "puesto": "Administrador general"
     }
 ]
