@@ -1,0 +1,67 @@
+---
+layout: default
+title: Inicio
+---
+
+<h2 class="main-header">Compara tu <b>salario</b></h2>
+
+<h3 class="text-center">
+  ¿Cuánto tiempo necesitarías trabajar para obtener el ingreso mensual declarado
+  por un funcionario público?
+</h3>
+
+<div class="row spaced">
+  <div class="form-group">
+    <label for="tu-salario">Ingresa tu salario</label>
+    <input id="tu-salario" class="form-control" placeholder="Ingresa tu salario"/>
+  </div>
+  <div class="form-group">
+    <label for="funcionario">Selecciona un funcionario</label>
+    <select class="form-control" id="funcionario-select">
+    </select>
+  </div>
+  <div class="form-group text-center">
+    <button id="calcular-btn" class="btn">Comparar</button>
+  </div>
+</div>
+
+<div class="row">
+
+  <div class="col-md-4">
+    <h6 class="text-center" style="font-weight:bold; font-weight: bold;">
+      <span class="funcionario"></span>
+    </h6>
+
+    <h6 class="text-center">
+      Puesto en el gobierno: <span class="puesto"></span>
+    </h6>
+
+    <div class="text-center">
+      <img src="img/donaciones.png" style="width: 150px;">
+    </div>
+
+    <h5 class="text-center sueldo-label"> Q. <span class="sueldo"></span></h5>
+
+    <h6 class="text-center sueldo-label" style="font-weight:bold;">Ingreso promedio mensual</h6>
+  </div>
+
+  <div class="col-md-4 text-center">
+    <div class="text-center" style="margin-top: 45px;">
+      <a id="tweet1" style="color: #039be5;" class="popup">
+        <i class="fa fa-twitter fa-4x"></i>
+      </a>
+    </div>
+    Yo tendría que trabajar <strong><span id="vis1"></span></strong> para obtener el ingreso mensual
+    del funcionario <span class="funcionario-nombre"></span>
+  </div>
+
+  <div class="col-md-4">
+    <div class="text-center" style="margin-top: 45px;">
+      <a id="tweet2" style="color: #039be5;" class="popup">
+        <i class="fa fa-twitter fa-4x"></i>
+      </a>
+    </div>
+    Una persona con el salario mínimo tendría que trabajar <strong><span id="vis2"></span></strong>
+    para obtener el ingreso mensual del funcionario <span class="funcionario-nombre"></span>
+  </div>
+</div>
