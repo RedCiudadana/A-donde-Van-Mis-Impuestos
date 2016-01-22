@@ -45,6 +45,8 @@
         }
 
         time1 = funcionarios[id]['ingresos_mensuales'] * 2592000 / sueldo;
+
+        // Reemplazar el 750 por el salario mínimo en quetzales
         time2 = funcionarios[id]['ingresos_mensuales'] * 2592000 / 750;
 
         resultChart1 = new CountUp('vis1', 0, time1);
