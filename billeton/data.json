@@ -1,23 +1,58 @@
 [
     {
         "funcionario": "Jimmy Morales",
-        "ingresos_mensuales": "141951",
         "puesto": "Presidente de Guatemala",
         "foto": "",
+        "ingresos_mensuales": "141951",
+        "pais": "Guatemala",
+        "organizacion": "Presidencia"
+    },
+    {
+        "funcionario": "Dilma Rousseff",
+        "puesto": "Presidente de Brasil",
+        "foto": "",
+        "ingresos_mensuales": "61120",
+        "pais": "Brasil",
+        "organizacion": "Presidencia"
+    },
+    {
+        "funcionario": "Enrique Peña Nieto",
+        "puesto": "Presidente de México",
+        "foto": "",
+        "ingresos_mensuales": "155925",
+        "pais": "México",
+        "organizacion": "Presidencia"
+    },
+    {
+        "funcionario": "Evo Morales",
+        "puesto": "Presidente de Bolivia",
+        "foto": "",
+        "ingresos_mensuales": "16556",
+        "pais": "Bolivia",
+        "organizacion": "Presidencia"
+    },
+        {
+        "funcionario": "Horacio Cartes",
+        "puesto": "Presidente de Paraguay",
+        "foto": "",
+        "ingresos_mensuales": "65605",
+        "pais": "Paraguay",
+        "organizacion": "Presidencia"
+    },
+    {
+        "funcionario": "Juan Manuel Santos",
+        "puesto": "Presidente de Colombia",
+        "foto": "",
+        "ingresos_mensuales": "76400",
+        "pais": "Colombia",
         "organizacion": "Presidencia"
     },
     {
         "funcionario": "Jafeth Cabrera",
-        "ingresos_mensuales": "134000",
-        "puesto": "Vice-Presidente de Guatemala",
+        "puesto": "Presidente de Guatemala",
         "foto": "",
+        "ingresos_mensuales": "134000",
+        "pais": "Guatemala",
         "organizacion": "Presidencia"
     },
-    {
-        "funcionario": "Julito Herrera",
-        "ingresos_mensuales": "1235",
-        "puesto": "Administrador general",
-        "foto": "",
-        "organizacion": "Presidencia"
-    }
 ]
