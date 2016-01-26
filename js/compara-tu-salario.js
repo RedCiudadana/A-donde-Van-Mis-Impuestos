@@ -103,7 +103,7 @@
           'href',
           baseUrl
             + 'Una persona con el salario mínimo debería trabajar '
-            + formatTime1(time1)
+            + formatTime1(time2)
             + ' para obtener el ingreso mensual el funcionario '
             + funcionarios[id]['funcionario']
         );
