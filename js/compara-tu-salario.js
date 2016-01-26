@@ -102,9 +102,9 @@
         $('#tweet2').attr(
           'href',
           baseUrl
-            + 'Una persona con el salario mínimo debería trabajar '
+            + 'Una persona con salario mínimo debería trabajar '
             + formatTime1(time2)
-            + ' para obtener el ingreso mensual el funcionario '
+            + ' para obtener el salario de '
             + funcionarios[id]['funcionario']
         );
 
