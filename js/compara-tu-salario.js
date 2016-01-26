@@ -76,6 +76,7 @@
           return;
         }
 
+        $('#img-funcionario').attr('src', funcionarios[id]['foto']);
         $('#funcionario-container').show(150);
 
         time1 = funcionarios[id]['ingresos_mensuales'] * 2592000 / sueldo;
