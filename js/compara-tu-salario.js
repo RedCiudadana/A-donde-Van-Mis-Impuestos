@@ -1,3 +1,19 @@
+function formatNumber(number) {
+  var f = Array(5);
+  f[0] = parseInt(number % 1000);
+  number /= 1000;
+  f[1] = parseInt(number % 1000);
+  number /= 1000;
+  f[2] = parseInt(number % 1000);
+  number /= 1000;
+
+  var ret = "";
+  ret += (ret == "" ? (f[2] == 0 ? "" : f[2] + "'") : zeroFill(f[2], 3) + "'");
+  ret += (ret == "" ? (f[1] == 0 ? "" : f[1] + ".") : zeroFill(f[1], 3) + ".");
+  ret += (ret == "" ? (f[0] == 0 ? "" : f[0]) : zeroFill(f[0], 3));
+  return ret;
+}
+
 (function($) {
   $(function() {
 
@@ -15,6 +31,7 @@
             + id++
             + '\" class=\"circle\">'
             + item['funcionario']
+            + ' - ' + item['puesto']
             + '</option>'
           );
       })
@@ -43,6 +60,8 @@
 
           return;
         }
+
+        $('#funcionario-container').show(150);
 
         time1 = funcionarios[id]['ingresos_mensuales'] * 2592000 / sueldo;
 
@@ -81,7 +100,7 @@
 
         $('.funcionario').text(funcionarios[id]['funcionario']);
         $('.puesto').text(funcionarios[id]['puesto']);
-        $('.sueldo').text(funcionarios[id]['ingresos_mensuales']);
+        $('.sueldo').text(formatNumber(funcionarios[id]['ingresos_mensuales']));
     });
 
     $('.popup').click(function(event) {

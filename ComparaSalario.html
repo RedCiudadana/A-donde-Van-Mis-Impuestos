@@ -11,21 +11,23 @@ title: Inicio
 </h3>
 
 <div class="row spaced">
-  <div class="form-group">
-    <label for="tu-salario">Ingresa tu salario</label>
-    <input id="tu-salario" class="form-control" placeholder="Ingresa tu salario en Quetzales"/>
-  </div>
-  <div class="form-group">
-    <label for="funcionario">Selecciona un funcionario</label>
-    <select class="form-control" id="funcionario-select">
-    </select>
-  </div>
-  <div class="form-group text-center">
-    <button id="calcular-btn" class="btn">Comparar</button>
+  <div class="col-md-10 col-md-offset-1">
+    <div class="form-group">
+      <label for="tu-salario">Ingresa tu salario</label>
+      <input id="tu-salario" class="form-control" placeholder="Ingresa tu salario en Quetzales"/>
+    </div>
+    <div class="form-group">
+      <label for="funcionario">Selecciona un funcionario</label>
+      <select class="form-control" id="funcionario-select">
+      </select>
+    </div>
+    <div class="form-group text-center">
+      <button id="calcular-btn" class="btn">Comparar</button>
+    </div>
   </div>
 </div>
 
-<div class="row">
+<div id="funcionario-container" class="row" style="display: none;">
 
   <div class="col-md-4">
     <h6 class="text-center" style="font-weight:bold; font-weight: bold;">
