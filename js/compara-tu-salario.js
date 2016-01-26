@@ -1,19 +1,3 @@
-function formatNumber(number) {
-  var f = Array(5);
-  f[0] = parseInt(number % 1000);
-  number /= 1000;
-  f[1] = parseInt(number % 1000);
-  number /= 1000;
-  f[2] = parseInt(number % 1000);
-  number /= 1000;
-
-  var ret = "";
-  ret += (ret == "" ? (f[2] == 0 ? "" : f[2] + "'") : zeroFill(f[2], 3) + "'");
-  ret += (ret == "" ? (f[1] == 0 ? "" : f[1] + ".") : zeroFill(f[1], 3) + ".");
-  ret += (ret == "" ? (f[0] == 0 ? "" : f[0]) : zeroFill(f[0], 3));
-  return ret;
-}
-
 (function($) {
   $(function() {
 

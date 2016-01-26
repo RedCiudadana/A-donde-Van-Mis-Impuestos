@@ -3,7 +3,7 @@
         "funcionario": "Jimmy Morales",
         "puesto": "Presidente de Guatemala",
         "foto": "/img/Compara/candidate-default.jpg",
-        "ingresos_mensuales": "141951",
+        "ingresos_mensuales": "141951.00",
         "pais": "Guatemala",
         "organizacion": "Presidencia"
     },
@@ -11,7 +11,7 @@
         "funcionario": "Dilma Rousseff",
         "puesto": "Presidente de Brasil",
         "foto": "/img/Compara/candidate-default.jpg",
-        "ingresos_mensuales": "61120",
+        "ingresos_mensuales": "61120.00",
         "pais": "Brasil",
         "organizacion": "Presidencia"
     },
@@ -19,7 +19,7 @@
         "funcionario": "Enrique Peña Nieto",
         "puesto": "Presidente de México",
         "foto": "/img/Compara/candidate-default.jpg",
-        "ingresos_mensuales": "155925",
+        "ingresos_mensuales": "155925.00",
         "pais": "México",
         "organizacion": "Presidencia"
     },
@@ -27,7 +27,7 @@
         "funcionario": "Evo Morales",
         "puesto": "Presidente de Bolivia",
         "foto": "/img/Compara/candidate-default.jpg",
-        "ingresos_mensuales": "16556",
+        "ingresos_mensuales": "16556.00",
         "pais": "Bolivia",
         "organizacion": "Presidencia"
     },
@@ -35,7 +35,7 @@
         "funcionario": "Horacio Cartes",
         "puesto": "Presidente de Paraguay",
         "foto": "/img/Compara/candidate-default.jpg",
-        "ingresos_mensuales": "65605",
+        "ingresos_mensuales": "65605.00",
         "pais": "Paraguay",
         "organizacion": "Presidencia"
     },
@@ -43,7 +43,7 @@
         "funcionario": "Juan Manuel Santos",
         "puesto": "Presidente de Colombia",
         "foto": "/img/Compara/candidate-default.jpg",
-        "ingresos_mensuales": "76400",
+        "ingresos_mensuales": "76400.00",
         "pais": "Colombia",
         "organizacion": "Presidencia"
     },
@@ -51,7 +51,7 @@
         "funcionario": "Jafeth Cabrera",
         "puesto": "Presidente de Guatemala",
         "foto": "/img/Compara/candidate-default.jpg",
-        "ingresos_mensuales": "134000",
+        "ingresos_mensuales": "134000.00",
         "pais": "Guatemala",
         "organizacion": "Presidencia"
     }
