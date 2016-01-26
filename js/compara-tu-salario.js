@@ -2,24 +2,38 @@
   $(function() {
 
     var funcionarios;
+    var funcionario_select = $('#funcionario-select');
 
     $.getJSON('billeton/data.json', function(data) {
       funcionarios = data;
 
-      var funcionario_select = $('#funcionario-select');
       var id = 0;
 
       data.forEach(function(item) {
         funcionario_select.append(
-          '<option value=\"'
-            + id++
-            + '\" class=\"circle\">'
+          '<option'
+            + ' value="' + id++ + '"'
+            + ' class="circle"'
+            + ' data-img="' + item['foto'] + '"'
+            + '>'
             + item['funcionario']
             + ' - ' + item['puesto']
             + '</option>'
-          );
+        );
       })
-    });
+    })
+      .done(function() {
+        funcionario_select.select2({
+          // theme: 'bootstrap',
+          templateResult: function(state) {
+            var img = $(state.element).data('img');
+
+            if (!img) { return state.text; }
+
+            return $('<span><img src="' + img + '" class="img-funcionario" /> ' + state.text + '</span>');
+          }
+        });
+      });
 
     $('#funcionario-select').on('change', function() {
       // TODO: potencialmente modificar la foto del funcionario
