@@ -23,8 +23,25 @@
       })
     })
       .done(function() {
+
+        // Sorting
+        funcionario_select.html(
+          $('#funcionario-select option').sort(function(a, b) {
+            a = a.text.toLowerCase();
+            b = b.text.toLowerCase();
+
+            if (a > b) {
+              return 1;
+            } else if (a < b) {
+              return -1;
+            }
+
+            return 0;
+          })
+        );
+
         funcionario_select.select2({
-          // theme: 'bootstrap',
+          theme: 'bootstrap',
           templateResult: function(state) {
             var img = $(state.element).data('img');
 
