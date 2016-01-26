@@ -10,7 +10,7 @@
     {
         "funcionario": "Dilma Rousseff",
         "puesto": "Presidente de Brasil",
-        "foto": "/img/Compara/candidate-default.jpg",
+        "foto": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/81/Dilma_Rousseff_-_foto_oficial_2011-01-09.jpg/200px-Dilma_Rousseff_-_foto_oficial_2011-01-09.jpg",
         "ingresos_mensuales": "61120.00",
         "pais": "Brasil",
         "organizacion": "Presidencia"
