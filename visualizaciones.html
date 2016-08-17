@@ -13,24 +13,56 @@ title: Visualizaciones
 
 <br>
 
-<ul class="nav nav-pills nav-justified">
+<ul id="myTabs" class="nav nav-pills nav-justified">
   <li role="presentation" class="active">
-    <a href="#PresupuestoTotal">Presupuesto Total</a>
+    <a href="#PresupuestoTotal" data-toggle="tab">Presupuesto Total</a>
   </li>
-  <li role="presentation"><a href="#Gasto">Tipo de Gasto</a></li>
-  <li role="presentation"><a href="#SubgrupoGasto">Subgrupo Tipo de Gasto</a></li>
-  <li role="presentation"><a href="#finalidad">Por Finalidad</a></li>
-  <li role="presentation"><a href="#institucion">Por Institución</a></li>
+  <li role="presentation">
+    <a href="#Gasto" data-toggle="tab">Tipo de Gasto</a>
+  </li>
+  <li role="presentation">
+    <a href="#SubgrupoGasto" data-toggle="tab">Subgrupo Tipo de Gasto</a>
+  </li>
+  <li role="presentation">
+    <a href="#PorFinalidad" data-toggle="tab">Por Finalidad</a>
+  </li>
+  <li role="presentation">
+    <a href="#PorInstitucion" data-toggle="tab">Por Institución</a>
+  </li>
 </ul>
 
 <br>
 
-<section id="PresupuestoTotal">
-  Gráfica inicial
-</section>
+<div class="tab-content">
+  <section id="PresupuestoTotal" class="tab-pane active">
+    Gráfica inicial
+  </section>
+
+  <section id="Gasto" class="tab-pane">
+    Tipo de Gasto
+  </section>
+
+  <section id="SubgrupoGasto" class="tab-pane">
+    Subgrupo Tipo de Gasto
+  </section>
+
+  <section id="PorFinalidad" class="tab-pane">
+    Por Finalidad
+  </section>
+
+  <section id="PorInstitucion" class="tab-pane">
+    Por Institucion
+  </section>
+</div>
 
 <script>
   $(function () {
+
+    $('#myTabs a').click(function(e) {
+      e.preventDefault();
+      $(this).tab('show');
+    });
+
     // Visualizaciones Presupuesto
     var spreadhsheetUrl = 'https://docs.google.com/spreadsheets/d/1k0klHXKZ7j0VK9Z4lMElBKVq4cFhzN3Q1k3ko-FRvYI/pubhtml';
 
@@ -41,6 +73,7 @@ title: Visualizaciones
 
         var dataTipoGastoAnio1 = dataTipoGasto[0];
 
+        // Gráfica de tipo de gasto
         $('#PresupuestoTotal').highcharts({
           chart: {
               plotBackgroundColor: null,
@@ -87,24 +120,3 @@ title: Visualizaciones
     });
   });
 </script>
-
-<!-- <section class="Gasto">Tipo de Gasto</span>
-  Hola Mundo
-</section>
-
-<section class="SubgrupoGasto">Subgrupo Tipo de Gasto</span>
-  Hola Mundo2
-</section>
-
-<section class="Por Finalidad">Por Finalidad</span>
-  Hola Mundo3
-</section>
-
-<section class="Por Finalidad">Por Finalidad</span>
-  Hola Mundo4
-</section>
-
-<section class="Por Institucion">Por Institucion</span>
-  Hola Mundo5
-</section>
- -->
