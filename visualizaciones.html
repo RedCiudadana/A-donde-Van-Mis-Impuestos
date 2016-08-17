@@ -8,44 +8,103 @@ title: Visualizaciones
 <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
 <script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
 <script src="/js/openspending.js"></script>
+<script src="http://code.highcharts.com/highcharts.js"></script>
+<script src="/js/tabletop.js"></script>
+
 <br>
 
-    <ul class="nav nav-pills nav-justified">
-      <li role="presentation" class="active"><a href="#PresupuestoTotal">Presupuesto Total</a></li>
-      <li role="presentation"><a href="#Gasto">Tipo de Gasto</a></li>
-      <li role="presentation"><a href="#SubgrupoGasto">Subgrupo Tipo de Gasto</a></li>
-      <li role="presentation"><a href="#finalidad">Por Finalidad</a></li>
-      <li role="presentation"><a href="#institucion">Por Institución</a></li>
-    </ul>
-    <br>
-    
-    <section span class="PresupuestoTotal">Presupuesto Total</span>
-    
-    Hola Mundo
-    
-    </section>
-        <section span class="Gasto">Tipo de Gasto</span>
-    
-    Hola Mundo
-    
-    </section>
-        <section span class="SubgrupoGasto">Subgrupo Tipo de Gasto</span>
-    
-    Hola Mundo2
-    
-    </section>
-    <section span class="Por Finalidad">Por Finalidad</span>
-    
-    Hola Mundo3
-    
-    </section>
-    <section span class="Por Finalidad">Por Finalidad</span>
-    
-    Hola Mundo4
-    
-    </section>
-        <section span class="Por Institucion">Por Institucion</span>
-    
-    Hola Mundo5
-    
-    </section>
+<ul class="nav nav-pills nav-justified">
+  <li role="presentation" class="active">
+    <a href="#PresupuestoTotal">Presupuesto Total</a>
+  </li>
+  <li role="presentation"><a href="#Gasto">Tipo de Gasto</a></li>
+  <li role="presentation"><a href="#SubgrupoGasto">Subgrupo Tipo de Gasto</a></li>
+  <li role="presentation"><a href="#finalidad">Por Finalidad</a></li>
+  <li role="presentation"><a href="#institucion">Por Institución</a></li>
+</ul>
+
+<br>
+
+<section id="PresupuestoTotal">
+  Gráfica inicial
+</section>
+
+<script>
+  $(function () {
+    // Visualizaciones Presupuesto
+    var spreadhsheetUrl = 'https://docs.google.com/spreadsheets/d/1k0klHXKZ7j0VK9Z4lMElBKVq4cFhzN3Q1k3ko-FRvYI/pubhtml';
+
+    Tabletop.init({
+      key: spreadhsheetUrl,
+      callback: function(data, tabletop) {
+        var dataTipoGasto = tabletop.sheets('tipoGasto').all();
+
+        var dataTipoGastoAnio1 = dataTipoGasto[0];
+
+        $('#PresupuestoTotal').highcharts({
+          chart: {
+              plotBackgroundColor: null,
+              plotBorderWidth: null,
+              plotShadow: false,
+              type: 'pie',
+              backgroundColor: '#eceff6'
+          },
+          title: {
+              text: 'Presupuesto ' + dataTipoGastoAnio1.ano
+          },
+          tooltip: {
+              enabled: false
+          },
+          legend: {
+            layout: 'vertical'
+          },
+          plotOptions: {
+              pie: {
+                  allowPointSelect: true,
+                  cursor: 'pointer',
+                  dataLabels: {
+                      enabled: false
+                  },
+                  showInLegend: true
+              }
+          },
+          series: [{
+              name: 'Brands',
+              colorByPoint: true,
+              data: [{
+                  name: 'Funcionamiento',
+                  y: parseFloat(dataTipoGastoAnio1.funcionamiento)
+              }, {
+                  name: 'Inversión',
+                  y: parseFloat(dataTipoGastoAnio1.inversion)
+              }, {
+                  name: 'Deuda',
+                  y: parseFloat(dataTipoGastoAnio1.deuda)
+              }]
+          }]
+        });
+      }
+    });
+  });
+</script>
+
+<!-- <section class="Gasto">Tipo de Gasto</span>
+  Hola Mundo
+</section>
+
+<section class="SubgrupoGasto">Subgrupo Tipo de Gasto</span>
+  Hola Mundo2
+</section>
+
+<section class="Por Finalidad">Por Finalidad</span>
+  Hola Mundo3
+</section>
+
+<section class="Por Finalidad">Por Finalidad</span>
+  Hola Mundo4
+</section>
+
+<section class="Por Institucion">Por Institucion</span>
+  Hola Mundo5
+</section>
+ -->
