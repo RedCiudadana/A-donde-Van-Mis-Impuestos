@@ -1,6 +1,5 @@
-pygments: true
+highlighter: rouge
 auto: true
 
 title: ¿A dónde van mis impuestos?
 openspendingjs: 'http://openspending.org/static/openspendingjs'
-
