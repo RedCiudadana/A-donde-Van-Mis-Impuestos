@@ -2,7 +2,7 @@
 layout: default
 title: Visualizaciones
 ---
-
+<br>
 <h3 class="page-header">Visualizaciones del <b>Presupuesto</b> 2016</h3>
 
 <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
@@ -11,11 +11,9 @@ title: Visualizaciones
 <script src="http://code.highcharts.com/highcharts.js"></script>
 <script src="/js/tabletop.js"></script>
 
-<br>
-
 <ul id="myTabs" class="nav nav-pills nav-justified">
   <li role="presentation" class="active">
-    <a href="#PresupuestoTotal" data-toggle="tab">Presupuesto Total</a>
+    <a href="#PresupuestoTotal" data-toggle="tab">Presupuesto de Egresos</a>
   </li>
   <li role="presentation">
     <a href="#Gasto" data-toggle="tab">Tipo de Gasto</a>
@@ -70,11 +68,13 @@ title: Visualizaciones
       key: spreadhsheetUrl,
       callback: function(data, tabletop) {
         var dataTipoGasto = tabletop.sheets('tipoGasto').all();
+        var dataInstitucion = tabletop.sheets('institucion').all();
 
         var dataTipoGastoAnio1 = dataTipoGasto[0];
+        var dataInstitucion1 = dataInstitucion[0];
 
         // Gráfica de tipo de gasto
-        $('#PresupuestoTotal').highcharts({
+        $('#Gasto').highcharts({
           chart: {
               plotBackgroundColor: null,
               plotBorderWidth: null,
@@ -85,8 +85,11 @@ title: Visualizaciones
           title: {
               text: 'Presupuesto ' + dataTipoGastoAnio1.ano
           },
+          subtitle: {
+            text: 'Fuente: <a href="https://sicoin.minfin.gob.gt">MINFIN</a>'
+          },
           tooltip: {
-              enabled: false
+              pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
           },
           legend: {
             layout: 'vertical'
@@ -102,7 +105,7 @@ title: Visualizaciones
               }
           },
           series: [{
-              name: 'Brands',
+              name: 'Presupuesto',
               colorByPoint: true,
               data: [{
                   name: 'Funcionamiento',
@@ -116,6 +119,79 @@ title: Visualizaciones
               }]
           }]
         });
+        
+        // Gráfica por institucion
+        $(function () {
+    $('#PorInstitucion').highcharts({
+        chart: {
+            type: 'column'
+        },
+        title: {
+            text: 'Asignaciones Presupuestarias Institucionales 2016'
+        },
+        subtitle: {
+            text: 'Fuente: <a href="https://sicoin.minfin.gob.gt">MINFIN</a>'
+        },
+        xAxis: {
+            type: 'category',
+            labels: {
+                rotation: -45,
+                style: {
+                    fontSize: '13px',
+                    fontFamily: 'Verdana, sans-serif'
+                }
+            }
+        },
+        yAxis: {
+            min: 0,
+            title: {
+                text: 'Monto (millones de Q.)'
+            }
+        },
+        legend: {
+            enabled: false
+        },
+        tooltip: {
+            pointFormat: 'Presupuesto de Egresos 2016: <b>{point.y:.1f} millones de Q.</b>'
+        },
+        series: [{
+            name: 'Population',
+            data: [
+                ['Presidencia de la República', 23.7],
+                ['Relaciones Exteriores', 16.1],
+                ['Gobernación', 14.2],
+                ['Defensa Nacional', 14.0],
+                ['Finanzas Públicas', 12.5],
+                ['Educación', 12.1],
+                ['Salud y Asistencia Social', 11.8],
+                ['Trabajo y Previsión Social', 11.7],
+                ['Economía', 11.1],
+                ['Agricultura, Ganadería y Alimentación,', 11.1],
+                ['Comunicaciones, Infraestructura y Vivienda', 10.5],
+                ['Energía y Minas', 10.4],
+                ['Cultura y Deportes', 10.0],
+                ['Secretarías y otras Dependencias del Ejecutivo', 9.3],
+                ['Ambiente y Recursos Naturales', 9.3],
+                ['Obligaciones del Estado a cargo del Tesoro', 9.0],
+                ['Desarrollo Social', 8.9],
+                ['Servicios de la Deuda Pública', 8.9],
+                ['Procuraduría General de la Nación', 8.9]
+            ],
+            dataLabels: {
+                enabled: true,
+                rotation: -90,
+                color: '#FFFFFF',
+                align: 'right',
+                format: '{point.y:.1f}', // one decimal
+                y: 10, // 10 pixels down from the top
+                style: {
+                    fontSize: '13px',
+                    fontFamily: 'Verdana, sans-serif'
+                }
+            }
+        }]
+    });
+});
       }
     });
   });
