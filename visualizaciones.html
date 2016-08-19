@@ -9,7 +9,10 @@ title: Visualizaciones
 <script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
 <script src="/js/openspending.js"></script>
 <script src="http://code.highcharts.com/highcharts.js"></script>
+<script src="https://code.highcharts.com/modules/heatmap.js"></script>
+<script src="https://code.highcharts.com/modules/treemap.js"></script>
 <script src="/js/tabletop.js"></script>
+
 
 <ul id="myTabs" class="nav nav-pills nav-justified">
   <li role="presentation" class="active">
@@ -192,6 +195,56 @@ title: Visualizaciones
         }]
     });
 });
+
+        // Gráfica Presupuesto
+        $(function () {
+    $('#PresupuestoTotal').highcharts({
+        colorAxis: {
+            minColor: '#FFFFFF',
+            maxColor: Highcharts.getOptions().colors[0]
+        },
+        series: [{
+            type: 'treemap',
+            layoutAlgorithm: 'squarified',
+            data: [{
+                name: 'A',
+                value: 6,
+                colorValue: 1
+            }, {
+                name: 'B',
+                value: 6,
+                colorValue: 2
+            }, {
+                name: 'C',
+                value: 4,
+                colorValue: 3
+            }, {
+                name: 'D',
+                value: 3,
+                colorValue: 4
+            }, {
+                name: 'E',
+                value: 2,
+                colorValue: 5
+            }, {
+                name: 'F',
+                value: 2,
+                colorValue: 6
+            }, {
+                name: 'G',
+                value: 1,
+                colorValue: 7
+            }]
+        }],
+        subtitle: {
+            text: 'Fuente: <a href="https://sicoin.minfin.gob.gt">MINFIN</a>'
+          },
+        title: {
+            text: 'Presupuesto de Egresos 2016'
+        }
+    });
+});
+
       }
     });
   });
