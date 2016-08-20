@@ -172,9 +172,9 @@ title: Visualizaciones
     
     $(function () {
     $('#PresupuestoTotal').highcharts({
-    		chart: {
+    	chart: {
             type: 'area'
-        },
+            },        
         title: {
             text: 'Presupuesto de Egresos 2010-2015'
             },
@@ -204,9 +204,10 @@ title: Visualizaciones
             data: [50433179630, 55582584842, 57704546696, 59731100116, 63159923148, 59586975672, 36766124997]
         }]
     });
-});
+    });
     
     // Gráfica de tipo de gasto
+    $(function () {
     $('#Gasto').highcharts({
           chart: {
               plotBackgroundColor: null,
@@ -251,9 +252,12 @@ title: Visualizaciones
                   y: parseFloat(dataTipoGastoAnio1.deuda)
               }]
           }]
-        });
+    });
+    });
 
-    chart: {
+    $(function () {
+    $('#Gasto').highcharts({
+        chart: {
             type: 'column'
         },
         title: {
@@ -307,7 +311,7 @@ title: Visualizaciones
             data: [46046.8, 12300.6, 12448.9]
         }]
     });
-});
+    });
         
     // Gráfica SubgrupoGasto
     $(function () {
@@ -517,9 +521,5 @@ title: Visualizaciones
     });
 
         
-
-
-      }
-    });
   });
 </script>
