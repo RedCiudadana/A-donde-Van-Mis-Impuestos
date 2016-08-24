@@ -266,3 +266,11 @@ img.img-funcionario {
   margin-top: 2em;
   margin-bottom: 2em;
 }
+
+.open-sans {
+  font-family: 'Open Sans', sans-serif;
+}
+
+.bold {
+  font-weight: bold;
+}
