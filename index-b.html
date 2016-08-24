@@ -3,6 +3,9 @@ layout: default
 title: Inicio
 ---
 
+<script src="/js/tabletop.js"></script>
+<script src="/js/accounting.js"></script>
+
 <h2 class="main-header grey-text">
   <b>
     Conoce todo sobre el Presupuesto de la nación,
@@ -20,7 +23,7 @@ title: Inicio
       </div>
 
       <div style="background-color: #414042; color: #ffffff; padding: 18px;">
-        <span style="font-size: 32px;"><strong>Q70,000,000.00</strong></span>
+        <span id="presupuestoTotal" style="font-size: 32px;"><strong>[cargando]</strong></span>
         <span style="font-size: 22px; margin-left: 10px;">MILLONES DE QUETZALES</span>
       </div>
 
@@ -31,7 +34,7 @@ title: Inicio
 
             <div>GASTO DEVENGADO</div>
             <div>
-              <span style="font-size: 28px;"><strong>Q45,000,000.00</strong></span>
+              <span id="presupuestoEjecutado" style="font-size: 28px;"><strong>[cargando]</strong></span>
               <span style="font-size: 12px; margin-left: 10px;">MILLONES DE QUETZALES</span>
             </div>
 
@@ -41,7 +44,7 @@ title: Inicio
         <div class="col-xs-12 col-md-4" style="background-color: #a7d270; color: #ffffff; padding: 18px;">
           <div>PORCENTAJE DE EJECUCIÓN</div>
           <div>
-            <span style="font-size: 28px;">50%</span>
+            <span id="porcentajeEjecucion" style="font-size: 28px;">[cargando]</span>
             <span style="font-size: 12px;"></span>
           </div>
         </div>
@@ -107,3 +110,29 @@ title: Inicio
 
   </div>
 </div>
+
+<script>
+  $(function () {
+    // Informacion index presupuesto
+    var spreadhsheetUrl = 'https://docs.google.com/spreadsheets/d/1mJujk4sZ20361Gp1UM-hOEMGL-qwmx6N-rHJE7ydhJY/pubhtml';
+
+    Tabletop.init({
+      key: spreadhsheetUrl,
+      callback: function(data, tabletop) {
+        var dataInicial = tabletop.sheets('data-index').all();
+
+        if (dataInicial.length === 0) {
+          console.log('Error');
+
+          return;
+        }
+
+        dataInicial = dataInicial[0];
+
+        $('#presupuestoTotal').html(accounting.formatMoney(dataInicial.presupuestoTotal, "Q", 2));
+        $('#presupuestoEjecutado').html(accounting.formatMoney(dataInicial.presupuestoEjecutado, "Q", 2));
+        $('#porcentajeEjecucion').html(accounting.formatNumber(dataInicial.porcentajeEjecucion, 0) + "%");
+      }
+    });
+  });
+</script>
