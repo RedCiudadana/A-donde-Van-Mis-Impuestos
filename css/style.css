@@ -287,6 +287,10 @@ img.img-funcionario {
   background-color: #eceff6;
 }
 
+.navbar-default .navbar-collapse {
+  border-color: #783c8f;
+}
+
 @media (min-width: 768px){
   .responsive-banner {
     width: 780px;
