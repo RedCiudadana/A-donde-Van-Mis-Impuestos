@@ -274,3 +274,13 @@ img.img-funcionario {
 .bold {
   font-weight: bold;
 }
+
+.responsive-banner {
+  width: 80%;
+}
+
+@media (min-width:768px){
+  .responsive-banner {
+    width: 780px;
+  }
+}
