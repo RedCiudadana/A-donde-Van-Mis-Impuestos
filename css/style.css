@@ -253,3 +253,16 @@ footer a, footer a:hover {
 img.img-funcionario {
   width: 20px;
 }
+
+.underlined {
+  text-decoration: underline;
+}
+
+.grey-text {
+  color: #414042;
+}
+
+.heavy-spaced {
+  margin-top: 2em;
+  margin-bottom: 2em;
+}
