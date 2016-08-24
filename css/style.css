@@ -44,16 +44,16 @@ a {
   color: #fff;
 }
 
-.logo-img{
-  
+/*.logo-img{
   padding-top: 15px;
-}
+}*/
 
 .navbar-right {
   padding: 10px 0 10px 0;
 }
+
 .navbar-brand {
-  max-width: 60%;
+  padding-left: 30px;
 }
 
 .spaced {
@@ -106,8 +106,12 @@ footer p {
   background-color: #783c8f;
 }
 
-.navbar-default .navbar-nav>li>a {
+.navbar-default .navbar-nav > li > a {
   color: #fff;
+}
+
+.navbar {
+  min-height: 74px;
 }
 
 nav ul.nav.nav-tabs li {
@@ -279,8 +283,16 @@ img.img-funcionario {
   width: 80%;
 }
 
+.navbar-default .navbar-toggle .icon-bar {
+  background-color: #eceff6;
+}
+
 @media (min-width: 768px){
   .responsive-banner {
     width: 780px;
+  }
+
+  .navbar-brand {
+    padding-left: 15px;
   }
 }
