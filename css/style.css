@@ -279,7 +279,7 @@ img.img-funcionario {
   width: 80%;
 }
 
-@media (min-width:768px){
+@media (min-width: 768px){
   .responsive-banner {
     width: 780px;
   }
