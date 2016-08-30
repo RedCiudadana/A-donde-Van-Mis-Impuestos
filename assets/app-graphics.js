@@ -328,9 +328,25 @@ define('app-graphics/components/app-version', ['exports', 'ember-cli-app-version
     name: name
   });
 });
+define('app-graphics/components/array-path-layer', ['exports', 'ember-leaflet/components/array-path-layer'], function (exports, _emberLeafletComponentsArrayPathLayer) {
+  Object.defineProperty(exports, 'default', {
+    enumerable: true,
+    get: function get() {
+      return _emberLeafletComponentsArrayPathLayer['default'];
+    }
+  });
+});
 define('app-graphics/components/as-scrollable', ['exports', 'ember-scrollable/components/ember-scrollable'], function (exports, _emberScrollableComponentsEmberScrollable) {
   exports['default'] = _emberScrollableComponentsEmberScrollable['default'].extend({
     classNames: 'as-scrollable'
+  });
+});
+define('app-graphics/components/base-layer', ['exports', 'ember-leaflet/components/base-layer'], function (exports, _emberLeafletComponentsBaseLayer) {
+  Object.defineProperty(exports, 'default', {
+    enumerable: true,
+    get: function get() {
+      return _emberLeafletComponentsBaseLayer['default'];
+    }
   });
 });
 define('app-graphics/components/basic-dropdown', ['exports', 'ember-basic-dropdown/components/basic-dropdown'], function (exports, _emberBasicDropdownComponentsBasicDropdown) {
@@ -579,6 +595,38 @@ define('app-graphics/components/bs-textarea', ['exports', 'ember-bootstrap/compo
     }
   });
 });
+define('app-graphics/components/circle-layer', ['exports', 'ember-leaflet/components/circle-layer'], function (exports, _emberLeafletComponentsCircleLayer) {
+  Object.defineProperty(exports, 'default', {
+    enumerable: true,
+    get: function get() {
+      return _emberLeafletComponentsCircleLayer['default'];
+    }
+  });
+});
+define('app-graphics/components/circle-marker-layer', ['exports', 'ember-leaflet/components/circle-marker-layer'], function (exports, _emberLeafletComponentsCircleMarkerLayer) {
+  Object.defineProperty(exports, 'default', {
+    enumerable: true,
+    get: function get() {
+      return _emberLeafletComponentsCircleMarkerLayer['default'];
+    }
+  });
+});
+define('app-graphics/components/container-layer', ['exports', 'ember-leaflet/components/container-layer'], function (exports, _emberLeafletComponentsContainerLayer) {
+  Object.defineProperty(exports, 'default', {
+    enumerable: true,
+    get: function get() {
+      return _emberLeafletComponentsContainerLayer['default'];
+    }
+  });
+});
+define('app-graphics/components/ember-islands', ['exports', 'ember-islands/components/ember-islands'], function (exports, _emberIslandsComponentsEmberIslands) {
+  Object.defineProperty(exports, 'default', {
+    enumerable: true,
+    get: function get() {
+      return _emberIslandsComponentsEmberIslands['default'];
+    }
+  });
+});
 define('app-graphics/components/ember-scrollable', ['exports', 'ember-scrollable/components/ember-scrollable'], function (exports, _emberScrollableComponentsEmberScrollable) {
   Object.defineProperty(exports, 'default', {
     enumerable: true,
@@ -593,6 +641,16 @@ define('app-graphics/components/ember-wormhole', ['exports', 'ember-wormhole/com
     get: function get() {
       return _emberWormholeComponentsEmberWormhole['default'];
     }
+  });
+});
+define('app-graphics/components/escuela-map-spot', ['exports', 'ember'], function (exports, _ember) {
+  var computed = _ember['default'].computed;
+  exports['default'] = _ember['default'].Component.extend({
+    spotItem: null,
+    currentItem: null,
+    isCurrent: computed('spotItem', 'currentItem', function () {
+      return this.get('spotItem') === this.get('currentItem');
+    })
   });
 });
 define('app-graphics/components/fa-icon', ['exports', 'ember-font-awesome/components/fa-icon'], function (exports, _emberFontAwesomeComponentsFaIcon) {
@@ -619,8 +677,32 @@ define('app-graphics/components/fa-stack', ['exports', 'ember-font-awesome/compo
     }
   });
 });
+define('app-graphics/components/geojson-layer', ['exports', 'ember-leaflet/components/geojson-layer'], function (exports, _emberLeafletComponentsGeojsonLayer) {
+  Object.defineProperty(exports, 'default', {
+    enumerable: true,
+    get: function get() {
+      return _emberLeafletComponentsGeojsonLayer['default'];
+    }
+  });
+});
 define('app-graphics/components/high-charts', ['exports', 'ember-highcharts/components/high-charts'], function (exports, _emberHighchartsComponentsHighCharts) {
   exports['default'] = _emberHighchartsComponentsHighCharts['default'];
+});
+define('app-graphics/components/image-layer', ['exports', 'ember-leaflet/components/image-layer'], function (exports, _emberLeafletComponentsImageLayer) {
+  Object.defineProperty(exports, 'default', {
+    enumerable: true,
+    get: function get() {
+      return _emberLeafletComponentsImageLayer['default'];
+    }
+  });
+});
+define('app-graphics/components/leaflet-map', ['exports', 'ember-leaflet/components/leaflet-map'], function (exports, _emberLeafletComponentsLeafletMap) {
+  Object.defineProperty(exports, 'default', {
+    enumerable: true,
+    get: function get() {
+      return _emberLeafletComponentsLeafletMap['default'];
+    }
+  });
 });
 define('app-graphics/components/light-table', ['exports', 'ember-light-table/components/light-table'], function (exports, _emberLightTableComponentsLightTable) {
   Object.defineProperty(exports, 'default', {
@@ -713,6 +795,49 @@ define('app-graphics/components/lt-spanned-row', ['exports', 'ember-light-table/
     }
   });
 });
+define('app-graphics/components/marker-layer', ['exports', 'ember-leaflet/components/marker-layer'], function (exports, _emberLeafletComponentsMarkerLayer) {
+  Object.defineProperty(exports, 'default', {
+    enumerable: true,
+    get: function get() {
+      return _emberLeafletComponentsMarkerLayer['default'];
+    }
+  });
+});
+define('app-graphics/components/obras-publicas-map', ['exports', 'ember'], function (exports, _ember) {
+  exports['default'] = _ember['default'].Component.extend({});
+});
+define('app-graphics/components/path-layer', ['exports', 'ember-leaflet/components/path-layer'], function (exports, _emberLeafletComponentsPathLayer) {
+  Object.defineProperty(exports, 'default', {
+    enumerable: true,
+    get: function get() {
+      return _emberLeafletComponentsPathLayer['default'];
+    }
+  });
+});
+define('app-graphics/components/point-path-layer', ['exports', 'ember-leaflet/components/point-path-layer'], function (exports, _emberLeafletComponentsPointPathLayer) {
+  Object.defineProperty(exports, 'default', {
+    enumerable: true,
+    get: function get() {
+      return _emberLeafletComponentsPointPathLayer['default'];
+    }
+  });
+});
+define('app-graphics/components/polygon-layer', ['exports', 'ember-leaflet/components/polygon-layer'], function (exports, _emberLeafletComponentsPolygonLayer) {
+  Object.defineProperty(exports, 'default', {
+    enumerable: true,
+    get: function get() {
+      return _emberLeafletComponentsPolygonLayer['default'];
+    }
+  });
+});
+define('app-graphics/components/polyline-layer', ['exports', 'ember-leaflet/components/polyline-layer'], function (exports, _emberLeafletComponentsPolylineLayer) {
+  Object.defineProperty(exports, 'default', {
+    enumerable: true,
+    get: function get() {
+      return _emberLeafletComponentsPolylineLayer['default'];
+    }
+  });
+});
 define('app-graphics/components/power-select-multiple', ['exports', 'ember-power-select/components/power-select-multiple'], function (exports, _emberPowerSelectComponentsPowerSelectMultiple) {
   Object.defineProperty(exports, 'default', {
     enumerable: true,
@@ -769,12 +894,119 @@ define('app-graphics/components/resize-detector', ['exports', 'ember-element-res
     }
   });
 });
+define('app-graphics/components/tile-layer', ['exports', 'ember-leaflet/components/tile-layer'], function (exports, _emberLeafletComponentsTileLayer) {
+  Object.defineProperty(exports, 'default', {
+    enumerable: true,
+    get: function get() {
+      return _emberLeafletComponentsTileLayer['default'];
+    }
+  });
+});
+define('app-graphics/components/wms-tile-layer', ['exports', 'ember-leaflet/components/wms-tile-layer'], function (exports, _emberLeafletComponentsWmsTileLayer) {
+  Object.defineProperty(exports, 'default', {
+    enumerable: true,
+    get: function get() {
+      return _emberLeafletComponentsWmsTileLayer['default'];
+    }
+  });
+});
 define('app-graphics/controllers/index', ['exports', 'ember'], function (exports, _ember) {
   exports['default'] = _ember['default'].Controller.extend({
     currentMunicipalidad: null,
     actions: {
       selectMunicipalidad: function selectMunicipalidad(selectedMunicipalidad) {
         this.set('currentMunicipalidad', selectedMunicipalidad);
+      }
+    }
+  });
+});
+define('app-graphics/controllers/map', ['exports', 'ember'], function (exports, _ember) {
+  exports['default'] = _ember['default'].Controller.extend({
+    currentLatitude: 14.569668,
+    currentLongitude: -90.497174,
+    currentZoom: 12,
+    currentObra: null,
+
+    currentDepartamento: null,
+    currentMunicipio: null,
+    currentAnio: null,
+
+    obras: _ember['default'].computed.alias('model.obras'),
+    categoriasIconos: _ember['default'].computed.alias('model.categoriasIconos'),
+    categoriasIconosActivas: _ember['default'].computed.filterBy('categoriasIconos', 'activo', true),
+
+    departamentosDisponibles: _ember['default'].computed.alias('model.departamentos'),
+
+    municipiosDisponibles: _ember['default'].computed('currentDepartamento', function () {
+
+      if (!this.get('currentDepartamento')) {
+        return _ember['default'].A([]);
+      }
+
+      return this.model.municipios.filterBy('departamento', this.get('currentDepartamento').codigo);
+    }),
+
+    aniosDisponibles: _ember['default'].computed('obras', function () {
+      var aniosDisponibles = this.get('obras').uniqBy('anio').sortBy('anio').mapBy('anio');
+
+      return aniosDisponibles;
+    }),
+
+    // Unused
+    categoriasDisponibles: _ember['default'].computed('obras', function () {
+      var categoriasDisponibles = this.get('obras').uniqBy('category').mapBy('category');
+
+      return categoriasDisponibles;
+    }),
+
+    obrasDesplegables: _ember['default'].computed('currentAnio', 'categoriasIconosActivas.[]', function () {
+      var obrasDesplegables = this.get('obras');
+
+      if (this.get('currentAnio')) {
+        obrasDesplegables = obrasDesplegables.filterBy('anio', this.get('currentAnio'));
+      }
+
+      var categoriasIconosActivasStrings = this.get('categoriasIconosActivas').mapBy('codigoIcono');
+
+      obrasDesplegables = obrasDesplegables.filter(function (obra) {
+        return categoriasIconosActivasStrings.contains(obra.get('category'));
+      });
+
+      return obrasDesplegables;
+    }),
+
+    actions: {
+
+      /**
+       * Al seleccionar un departamento el mapa se mueve a su ubicación central, además
+       * se aplica un filtro sobre los municipios disponibles.
+       */
+      selectDepartamento: function selectDepartamento(departamento) {
+        this.set('currentDepartamento', departamento);
+
+        this.set('currentLatitude', departamento.latitude);
+        this.set('currentLongitude', departamento.longitude);
+
+        this.set('currentMunicipio', null);
+      },
+
+      selectMunicipio: function selectMunicipio(municipio) {
+        this.set('currentMunicipio', municipio);
+
+        this.set('currentLatitude', municipio.latitude);
+        this.set('currentLongitude', municipio.longitude);
+      },
+
+      selectAnio: function selectAnio(anio) {
+        this.set('currentAnio', anio);
+      },
+
+      toggleActiveCategory: function toggleActiveCategory(category) {
+        category.set('activo', !category.get('activo'));
+      },
+
+      toggleAllCategories: function toggleAllCategories() {
+        this.get('categoriasIconos').setEach('activo', true);
       }
     }
   });
@@ -980,6 +1212,20 @@ define('app-graphics/helpers/bs-read-path', ['exports', 'ember-bootstrap/helpers
     }
   });
 });
+define('app-graphics/helpers/div-icon', ['exports', 'ember-leaflet/helpers/div-icon'], function (exports, _emberLeafletHelpersDivIcon) {
+  Object.defineProperty(exports, 'default', {
+    enumerable: true,
+    get: function get() {
+      return _emberLeafletHelpersDivIcon['default'];
+    }
+  });
+  Object.defineProperty(exports, 'divIcon', {
+    enumerable: true,
+    get: function get() {
+      return _emberLeafletHelpersDivIcon.divIcon;
+    }
+  });
+});
 define('app-graphics/helpers/ember-power-select-is-selected', ['exports', 'ember-power-select/helpers/ember-power-select-is-selected'], function (exports, _emberPowerSelectHelpersEmberPowerSelectIsSelected) {
   Object.defineProperty(exports, 'default', {
     enumerable: true,
@@ -1050,6 +1296,20 @@ define('app-graphics/helpers/gte', ['exports', 'ember', 'ember-truth-helpers/hel
 
   exports['default'] = forExport;
 });
+define('app-graphics/helpers/icon', ['exports', 'ember-leaflet/helpers/icon'], function (exports, _emberLeafletHelpersIcon) {
+  Object.defineProperty(exports, 'default', {
+    enumerable: true,
+    get: function get() {
+      return _emberLeafletHelpersIcon['default'];
+    }
+  });
+  Object.defineProperty(exports, 'icon', {
+    enumerable: true,
+    get: function get() {
+      return _emberLeafletHelpersIcon.icon;
+    }
+  });
+});
 define('app-graphics/helpers/is-array', ['exports', 'ember', 'ember-truth-helpers/helpers/is-array'], function (exports, _ember, _emberTruthHelpersHelpersIsArray) {
 
   var forExport = null;
@@ -1061,6 +1321,20 @@ define('app-graphics/helpers/is-array', ['exports', 'ember', 'ember-truth-helper
   }
 
   exports['default'] = forExport;
+});
+define('app-graphics/helpers/lat-lng-bounds', ['exports', 'ember-leaflet/helpers/lat-lng-bounds'], function (exports, _emberLeafletHelpersLatLngBounds) {
+  Object.defineProperty(exports, 'default', {
+    enumerable: true,
+    get: function get() {
+      return _emberLeafletHelpersLatLngBounds['default'];
+    }
+  });
+  Object.defineProperty(exports, 'latLngBounds', {
+    enumerable: true,
+    get: function get() {
+      return _emberLeafletHelpersLatLngBounds.latLngBounds;
+    }
+  });
 });
 define('app-graphics/helpers/lt', ['exports', 'ember', 'ember-truth-helpers/helpers/lt'], function (exports, _ember, _emberTruthHelpersHelpersLt) {
 
@@ -1124,6 +1398,20 @@ define('app-graphics/helpers/or', ['exports', 'ember', 'ember-truth-helpers/help
 });
 define('app-graphics/helpers/pluralize', ['exports', 'ember-inflector/lib/helpers/pluralize'], function (exports, _emberInflectorLibHelpersPluralize) {
   exports['default'] = _emberInflectorLibHelpersPluralize['default'];
+});
+define('app-graphics/helpers/point', ['exports', 'ember-leaflet/helpers/point'], function (exports, _emberLeafletHelpersPoint) {
+  Object.defineProperty(exports, 'default', {
+    enumerable: true,
+    get: function get() {
+      return _emberLeafletHelpersPoint['default'];
+    }
+  });
+  Object.defineProperty(exports, 'point', {
+    enumerable: true,
+    get: function get() {
+      return _emberLeafletHelpersPoint.point;
+    }
+  });
 });
 define('app-graphics/helpers/singularize', ['exports', 'ember-inflector/lib/helpers/singularize'], function (exports, _emberInflectorLibHelpersSingularize) {
   exports['default'] = _emberInflectorLibHelpersSingularize['default'];
@@ -1275,6 +1563,20 @@ define('app-graphics/initializers/injectStore', ['exports', 'ember'], function (
     initialize: _ember['default'].K
   };
 });
+define('app-graphics/initializers/leaflet-assets', ['exports', 'ember-leaflet/initializers/leaflet-assets'], function (exports, _emberLeafletInitializersLeafletAssets) {
+  Object.defineProperty(exports, 'default', {
+    enumerable: true,
+    get: function get() {
+      return _emberLeafletInitializersLeafletAssets['default'];
+    }
+  });
+  Object.defineProperty(exports, 'initialize', {
+    enumerable: true,
+    get: function get() {
+      return _emberLeafletInitializersLeafletAssets.initialize;
+    }
+  });
+});
 define('app-graphics/initializers/load-bootstrap-config', ['exports', 'app-graphics/config/environment', 'ember-bootstrap/config'], function (exports, _appGraphicsConfigEnvironment, _emberBootstrapConfig) {
   exports.initialize = initialize;
 
@@ -1405,6 +1707,7 @@ define('app-graphics/router', ['exports', 'ember', 'app-graphics/config/environm
   });
 
   Router.map(function () {
+    this.route('map', { path: '/map' });
     this.route('municipio', { path: '/municipalidad/:municipalidad' });
     this.route('ranking', function () {
       this.route('presupuesto');
@@ -1418,7 +1721,9 @@ define('app-graphics/router', ['exports', 'ember', 'app-graphics/config/environm
 });
 define('app-graphics/routes/application', ['exports', 'ember', 'accounting/format-money', 'accounting/format-number'], function (exports, _ember, _accountingFormatMoney, _accountingFormatNumber) {
   exports['default'] = _ember['default'].Route.extend({
+
     tabletop: _ember['default'].inject.service('tabletop'),
+
     model: function model() {
       return this.get('tabletop').fetch('municipalidad-data').then(function (data) {
         return _ember['default'].A(data).map(function (e) {
@@ -1456,6 +1761,98 @@ define('app-graphics/routes/index', ['exports', 'ember'], function (exports, _em
           municipalidad: municipalidad.municipio
         });
       }
+    }
+  });
+});
+define('app-graphics/routes/map', ['exports', 'ember'], function (exports, _ember) {
+  // import icon from 'ember-leaflet/helpers/icon';
+
+  exports['default'] = _ember['default'].Route.extend({
+
+    tabletop: _ember['default'].inject.service('tabletop-mapas'),
+
+    // TODO: Mover esto a algún lado donde se pueda cargar aún cuando se navega por
+    // link
+    model: function model() {
+
+      return _ember['default'].RSVP.hash({
+        obras: this.get('tabletop').fetch('data').then(function (data) {
+          return _ember['default'].A(data).map(function (e) {
+            _ember['default'].setProperties(e, {
+              latitude: parseFloat(e.latitude),
+              longitude: parseFloat(e.longitude),
+              anio: parseInt(e.anio),
+
+              // TODO: Fix to use icon helper from ember-leaflet
+              icon: L.icon({
+                iconUrl: '/assets/img/map-icons/' + e.category + '.png',
+                iconSize: L.point(44, 58).multiplyBy(0.95)
+              })
+            });
+
+            return _ember['default'].Object.create(e);
+          });
+        }),
+
+        departamentos: this.get('tabletop').fetch('departamentos').then(function (data) {
+          return _ember['default'].A(data).map(function (e) {
+            _ember['default'].setProperties(e, {
+              latitude: parseFloat(e.latitude),
+              longitude: parseFloat(e.longitude)
+            });
+
+            return e;
+          });
+        }),
+
+        municipios: this.get('tabletop').fetch('municipios').then(function (data) {
+          return _ember['default'].A(data).map(function (e) {
+            _ember['default'].setProperties(e, {
+              latitude: parseFloat(e.latitude),
+              longitude: parseFloat(e.longitude)
+            });
+
+            return e;
+          });
+        }),
+
+        categoriasIconos: this.get('tabletop').fetch('categorias-iconos').then(function (data) {
+          var categoriasIconos = _ember['default'].A(data).map(function (e) {
+            var emberObject = _ember['default'].Object.create(e);
+
+            _ember['default'].setProperties(emberObject, {
+              iconUrl: '/assets/img/category-icons/' + e.codigoIcono + '.jpg',
+              activo: true
+            });
+
+            return emberObject;
+          });
+
+          return categoriasIconos;
+        })
+      });
+    },
+
+    setupController: function setupController(controller, model) {
+      this._super(controller, model);
+
+      if (!_ember['default'].isEmpty(model.obras)) {
+        var currentObra = model.obras.objectAt(0);
+
+        controller.set('currentObra', currentObra);
+        controller.set('currentLatitude', currentObra.latitude);
+        controller.set('currentLongitude', currentObra.longitude);
+      }
+
+      model.obras.forEach(function (obra) {
+        obra.set('categoryObject', model.categoriasIconos.findBy('codigoIcono', obra.category));
+      });
+
+      controller.set('departamentosDisponibles', model.departamentos);
+    },
+
+    _findCategoryByCodigoIcono: function _findCategoryByCodigoIcono(categoryIcon) {
+      return this.get('categoriasIconos').findBy('codigoIcono', categoryIcon);
     }
   });
 });
@@ -1513,6 +1910,26 @@ define('app-graphics/services/resize-detector', ['exports', 'ember-element-resiz
     enumerable: true,
     get: function get() {
       return _emberElementResizeDetectorServicesResizeDetector['default'];
+    }
+  });
+});
+define('app-graphics/services/tabletop-mapas', ['exports', 'ember', 'tabletop'], function (exports, _ember, _tabletop) {
+
+  // Aplicación de visualización de gráficas / Obras de mapa
+  var spreadsheet = 'https://docs.google.com/spreadsheets/d/1zFpmcoS_WCNDCPQr34K34htSgoufPb2zP1BDAaoa2lw/pubhtml';
+
+  exports['default'] = _ember['default'].Service.extend({
+    fetch: function fetch(worksheet) {
+      var promise = new _ember['default'].RSVP.Promise(function (resolve) {
+        _tabletop['default'].init({
+          key: spreadsheet,
+          callback: function callback(data) {
+            resolve(data[worksheet].elements);
+          }
+        });
+      });
+
+      return promise;
     }
   });
 });
@@ -1604,7 +2021,7 @@ define("app-graphics/templates/application", ["exports"], function (exports) {
             "column": 0
           },
           "end": {
-            "line": 8,
+            "line": 10,
             "column": 0
           }
         },
@@ -1616,28 +2033,7 @@ define("app-graphics/templates/application", ["exports"], function (exports) {
       hasRendered: false,
       buildFragment: function buildFragment(dom) {
         var el0 = dom.createDocumentFragment();
-        var el1 = dom.createElement("div");
-        dom.setAttribute(el1, "class", "container");
-        var el2 = dom.createTextNode("\n  ");
-        dom.appendChild(el1, el2);
-        var el2 = dom.createElement("div");
-        dom.setAttribute(el2, "class", "row");
-        var el3 = dom.createTextNode("\n    ");
-        dom.appendChild(el2, el3);
-        var el3 = dom.createElement("div");
-        dom.setAttribute(el3, "class", "col-lg-12");
-        var el4 = dom.createTextNode("\n      ");
-        dom.appendChild(el3, el4);
-        var el4 = dom.createComment("");
-        dom.appendChild(el3, el4);
-        var el4 = dom.createTextNode("\n    ");
-        dom.appendChild(el3, el4);
-        dom.appendChild(el2, el3);
-        var el3 = dom.createTextNode("\n  ");
-        dom.appendChild(el2, el3);
-        dom.appendChild(el1, el2);
-        var el2 = dom.createTextNode("\n");
-        dom.appendChild(el1, el2);
+        var el1 = dom.createComment("");
         dom.appendChild(el0, el1);
         var el1 = dom.createTextNode("\n");
         dom.appendChild(el0, el1);
@@ -1645,10 +2041,11 @@ define("app-graphics/templates/application", ["exports"], function (exports) {
       },
       buildRenderNodes: function buildRenderNodes(dom, fragment, contextualElement) {
         var morphs = new Array(1);
-        morphs[0] = dom.createMorphAt(dom.childAt(fragment, [0, 1, 1]), 1, 1);
+        morphs[0] = dom.createMorphAt(fragment, 0, 0, contextualElement);
+        dom.insertBoundary(fragment, 0);
         return morphs;
       },
-      statements: [["content", "outlet", ["loc", [null, [4, 6], [4, 16]]], 0, 0, 0, 0]],
+      statements: [["content", "ember-islands", ["loc", [null, [9, 0], [9, 17]]], 0, 0, 0, 0]],
       locals: [],
       templates: []
     };
@@ -5848,6 +6245,48 @@ define("app-graphics/templates/components/bs-select", ["exports"], function (exp
     };
   })());
 });
+define("app-graphics/templates/components/escuela-map-spot", ["exports"], function (exports) {
+  exports["default"] = Ember.HTMLBars.template((function () {
+    return {
+      meta: {
+        "revision": "Ember@2.7.0-beta.4",
+        "loc": {
+          "source": null,
+          "start": {
+            "line": 1,
+            "column": 0
+          },
+          "end": {
+            "line": 2,
+            "column": 0
+          }
+        },
+        "moduleName": "app-graphics/templates/components/escuela-map-spot.hbs"
+      },
+      isEmpty: false,
+      arity: 0,
+      cachedFragment: null,
+      hasRendered: false,
+      buildFragment: function buildFragment(dom) {
+        var el0 = dom.createDocumentFragment();
+        var el1 = dom.createComment("");
+        dom.appendChild(el0, el1);
+        var el1 = dom.createTextNode("\n");
+        dom.appendChild(el0, el1);
+        return el0;
+      },
+      buildRenderNodes: function buildRenderNodes(dom, fragment, contextualElement) {
+        var morphs = new Array(1);
+        morphs[0] = dom.createMorphAt(fragment, 0, 0, contextualElement);
+        dom.insertBoundary(fragment, 0);
+        return morphs;
+      },
+      statements: [["content", "yield", ["loc", [null, [1, 0], [1, 9]]], 0, 0, 0, 0]],
+      locals: [],
+      templates: []
+    };
+  })());
+});
 define("app-graphics/templates/components/form-element/errors", ["exports"], function (exports) {
   exports["default"] = Ember.HTMLBars.template((function () {
     var child0 = (function () {
@@ -7761,6 +8200,43 @@ define("app-graphics/templates/components/light-table/cells/municipalidad-link",
     };
   })());
 });
+define("app-graphics/templates/components/obras-publicas-map", ["exports"], function (exports) {
+  exports["default"] = Ember.HTMLBars.template((function () {
+    return {
+      meta: {
+        "revision": "Ember@2.7.0-beta.4",
+        "loc": {
+          "source": null,
+          "start": {
+            "line": 1,
+            "column": 0
+          },
+          "end": {
+            "line": 2,
+            "column": 0
+          }
+        },
+        "moduleName": "app-graphics/templates/components/obras-publicas-map.hbs"
+      },
+      isEmpty: false,
+      arity: 0,
+      cachedFragment: null,
+      hasRendered: false,
+      buildFragment: function buildFragment(dom) {
+        var el0 = dom.createDocumentFragment();
+        var el1 = dom.createTextNode("Obras publicas map HBS file contents\n");
+        dom.appendChild(el0, el1);
+        return el0;
+      },
+      buildRenderNodes: function buildRenderNodes() {
+        return [];
+      },
+      statements: [],
+      locals: [],
+      templates: []
+    };
+  })());
+});
 define("app-graphics/templates/index", ["exports"], function (exports) {
   exports["default"] = Ember.HTMLBars.template((function () {
     var child0 = (function () {
@@ -8026,6 +8502,548 @@ define("app-graphics/templates/index", ["exports"], function (exports) {
       statements: [["block", "link-to", ["ranking"], [], 0, null, ["loc", [null, [23, 8], [25, 20]]]], ["block", "power-select", [], ["selected", ["subexpr", "@mut", [["get", "currentMunicipalidad", ["loc", [null, [64, 15], [64, 35]]], 0, 0, 0, 0]], [], [], 0, 0], "options", ["subexpr", "@mut", [["get", "model", ["loc", [null, [65, 14], [65, 19]]], 0, 0, 0, 0]], [], [], 0, 0], "onchange", ["subexpr", "action", ["selectMunicipalidad"], [], ["loc", [null, [66, 15], [66, 45]]], 0, 0], "searchField", "nombreMunicipio", "placeholder", "Buscar"], 1, null, ["loc", [null, [63, 4], [72, 21]]]], ["element", "action", ["consultarMunicipalidad", ["get", "currentMunicipalidad", ["loc", [null, [78, 42], [78, 62]]], 0, 0, 0, 0]], [], ["loc", [null, [78, 8], [78, 64]]], 0, 0]],
       locals: [],
       templates: [child0, child1]
+    };
+  })());
+});
+define("app-graphics/templates/map", ["exports"], function (exports) {
+  exports["default"] = Ember.HTMLBars.template((function () {
+    var child0 = (function () {
+      return {
+        meta: {
+          "revision": "Ember@2.7.0-beta.4",
+          "loc": {
+            "source": null,
+            "start": {
+              "line": 29,
+              "column": 2
+            },
+            "end": {
+              "line": 39,
+              "column": 2
+            }
+          },
+          "moduleName": "app-graphics/templates/map.hbs"
+        },
+        isEmpty: false,
+        arity: 1,
+        cachedFragment: null,
+        hasRendered: false,
+        buildFragment: function buildFragment(dom) {
+          var el0 = dom.createDocumentFragment();
+          var el1 = dom.createTextNode("    ");
+          dom.appendChild(el0, el1);
+          var el1 = dom.createComment("");
+          dom.appendChild(el0, el1);
+          var el1 = dom.createTextNode("\n");
+          dom.appendChild(el0, el1);
+          return el0;
+        },
+        buildRenderNodes: function buildRenderNodes(dom, fragment, contextualElement) {
+          var morphs = new Array(1);
+          morphs[0] = dom.createMorphAt(fragment, 1, 1, contextualElement);
+          return morphs;
+        },
+        statements: [["content", "departamento.nombre", ["loc", [null, [38, 4], [38, 27]]], 0, 0, 0, 0]],
+        locals: ["departamento"],
+        templates: []
+      };
+    })();
+    var child1 = (function () {
+      return {
+        meta: {
+          "revision": "Ember@2.7.0-beta.4",
+          "loc": {
+            "source": null,
+            "start": {
+              "line": 45,
+              "column": 2
+            },
+            "end": {
+              "line": 56,
+              "column": 2
+            }
+          },
+          "moduleName": "app-graphics/templates/map.hbs"
+        },
+        isEmpty: false,
+        arity: 1,
+        cachedFragment: null,
+        hasRendered: false,
+        buildFragment: function buildFragment(dom) {
+          var el0 = dom.createDocumentFragment();
+          var el1 = dom.createTextNode("    ");
+          dom.appendChild(el0, el1);
+          var el1 = dom.createComment("");
+          dom.appendChild(el0, el1);
+          var el1 = dom.createTextNode("\n");
+          dom.appendChild(el0, el1);
+          return el0;
+        },
+        buildRenderNodes: function buildRenderNodes(dom, fragment, contextualElement) {
+          var morphs = new Array(1);
+          morphs[0] = dom.createMorphAt(fragment, 1, 1, contextualElement);
+          return morphs;
+        },
+        statements: [["content", "municipio.nombre", ["loc", [null, [55, 4], [55, 24]]], 0, 0, 0, 0]],
+        locals: ["municipio"],
+        templates: []
+      };
+    })();
+    var child2 = (function () {
+      return {
+        meta: {
+          "revision": "Ember@2.7.0-beta.4",
+          "loc": {
+            "source": null,
+            "start": {
+              "line": 61,
+              "column": 2
+            },
+            "end": {
+              "line": 71,
+              "column": 2
+            }
+          },
+          "moduleName": "app-graphics/templates/map.hbs"
+        },
+        isEmpty: false,
+        arity: 1,
+        cachedFragment: null,
+        hasRendered: false,
+        buildFragment: function buildFragment(dom) {
+          var el0 = dom.createDocumentFragment();
+          var el1 = dom.createTextNode("    ");
+          dom.appendChild(el0, el1);
+          var el1 = dom.createComment("");
+          dom.appendChild(el0, el1);
+          var el1 = dom.createTextNode("\n");
+          dom.appendChild(el0, el1);
+          return el0;
+        },
+        buildRenderNodes: function buildRenderNodes(dom, fragment, contextualElement) {
+          var morphs = new Array(1);
+          morphs[0] = dom.createMorphAt(fragment, 1, 1, contextualElement);
+          return morphs;
+        },
+        statements: [["content", "anio", ["loc", [null, [70, 4], [70, 12]]], 0, 0, 0, 0]],
+        locals: ["anio"],
+        templates: []
+      };
+    })();
+    var child3 = (function () {
+      var child0 = (function () {
+        var child0 = (function () {
+          return {
+            meta: {
+              "revision": "Ember@2.7.0-beta.4",
+              "loc": {
+                "source": null,
+                "start": {
+                  "line": 81,
+                  "column": 6
+                },
+                "end": {
+                  "line": 94,
+                  "column": 6
+                }
+              },
+              "moduleName": "app-graphics/templates/map.hbs"
+            },
+            isEmpty: false,
+            arity: 0,
+            cachedFragment: null,
+            hasRendered: false,
+            buildFragment: function buildFragment(dom) {
+              var el0 = dom.createDocumentFragment();
+              var el1 = dom.createTextNode("        ");
+              dom.appendChild(el0, el1);
+              var el1 = dom.createElement("div");
+              dom.setAttribute(el1, "class", "obra-popup-header");
+              var el2 = dom.createTextNode("\n        ");
+              dom.appendChild(el1, el2);
+              dom.appendChild(el0, el1);
+              var el1 = dom.createTextNode("\n        ");
+              dom.appendChild(el0, el1);
+              var el1 = dom.createElement("div");
+              dom.setAttribute(el1, "class", "obra-popup-content");
+              var el2 = dom.createTextNode("\n          ");
+              dom.appendChild(el1, el2);
+              var el2 = dom.createElement("p");
+              var el3 = dom.createElement("strong");
+              var el4 = dom.createTextNode("Nombre:");
+              dom.appendChild(el3, el4);
+              dom.appendChild(el2, el3);
+              var el3 = dom.createTextNode(" ");
+              dom.appendChild(el2, el3);
+              var el3 = dom.createComment("");
+              dom.appendChild(el2, el3);
+              dom.appendChild(el1, el2);
+              var el2 = dom.createTextNode("\n          ");
+              dom.appendChild(el1, el2);
+              var el2 = dom.createElement("p");
+              var el3 = dom.createElement("strong");
+              var el4 = dom.createTextNode("Dirección:");
+              dom.appendChild(el3, el4);
+              dom.appendChild(el2, el3);
+              var el3 = dom.createTextNode(" ");
+              dom.appendChild(el2, el3);
+              var el3 = dom.createComment("");
+              dom.appendChild(el2, el3);
+              dom.appendChild(el1, el2);
+              var el2 = dom.createTextNode("\n          ");
+              dom.appendChild(el1, el2);
+              var el2 = dom.createElement("p");
+              var el3 = dom.createElement("strong");
+              var el4 = dom.createTextNode("Año:");
+              dom.appendChild(el3, el4);
+              dom.appendChild(el2, el3);
+              var el3 = dom.createTextNode(" ");
+              dom.appendChild(el2, el3);
+              var el3 = dom.createComment("");
+              dom.appendChild(el2, el3);
+              dom.appendChild(el1, el2);
+              var el2 = dom.createTextNode("\n          ");
+              dom.appendChild(el1, el2);
+              var el2 = dom.createElement("p");
+              var el3 = dom.createElement("strong");
+              var el4 = dom.createTextNode("Categoría:");
+              dom.appendChild(el3, el4);
+              dom.appendChild(el2, el3);
+              var el3 = dom.createTextNode(" ");
+              dom.appendChild(el2, el3);
+              var el3 = dom.createComment("");
+              dom.appendChild(el2, el3);
+              dom.appendChild(el1, el2);
+              var el2 = dom.createTextNode("\n        ");
+              dom.appendChild(el1, el2);
+              dom.appendChild(el0, el1);
+              var el1 = dom.createTextNode("\n");
+              dom.appendChild(el0, el1);
+              return el0;
+            },
+            buildRenderNodes: function buildRenderNodes(dom, fragment, contextualElement) {
+              var element2 = dom.childAt(fragment, [3]);
+              var morphs = new Array(4);
+              morphs[0] = dom.createMorphAt(dom.childAt(element2, [1]), 2, 2);
+              morphs[1] = dom.createMorphAt(dom.childAt(element2, [3]), 2, 2);
+              morphs[2] = dom.createMorphAt(dom.childAt(element2, [5]), 2, 2);
+              morphs[3] = dom.createMorphAt(dom.childAt(element2, [7]), 2, 2);
+              return morphs;
+            },
+            statements: [["content", "obra.Institution", ["loc", [null, [89, 38], [89, 58]]], 0, 0, 0, 0], ["content", "obra.Address", ["loc", [null, [90, 41], [90, 57]]], 0, 0, 0, 0], ["content", "obra.anio", ["loc", [null, [91, 35], [91, 48]]], 0, 0, 0, 0], ["content", "obra.categoryObject.nombre", ["loc", [null, [92, 41], [92, 71]]], 0, 0, 0, 0]],
+            locals: [],
+            templates: []
+          };
+        })();
+        return {
+          meta: {
+            "revision": "Ember@2.7.0-beta.4",
+            "loc": {
+              "source": null,
+              "start": {
+                "line": 80,
+                "column": 4
+              },
+              "end": {
+                "line": 95,
+                "column": 4
+              }
+            },
+            "moduleName": "app-graphics/templates/map.hbs"
+          },
+          isEmpty: false,
+          arity: 1,
+          cachedFragment: null,
+          hasRendered: false,
+          buildFragment: function buildFragment(dom) {
+            var el0 = dom.createDocumentFragment();
+            var el1 = dom.createComment("");
+            dom.appendChild(el0, el1);
+            return el0;
+          },
+          buildRenderNodes: function buildRenderNodes(dom, fragment, contextualElement) {
+            var morphs = new Array(1);
+            morphs[0] = dom.createMorphAt(fragment, 0, 0, contextualElement);
+            dom.insertBoundary(fragment, 0);
+            dom.insertBoundary(fragment, null);
+            return morphs;
+          },
+          statements: [["block", "marker-layer", [], ["lat", ["subexpr", "@mut", [["get", "obra.latitude", ["loc", [null, [82, 12], [82, 25]]], 0, 0, 0, 0]], [], [], 0, 0], "lng", ["subexpr", "@mut", [["get", "obra.longitude", ["loc", [null, [83, 12], [83, 26]]], 0, 0, 0, 0]], [], [], 0, 0], "icon", ["subexpr", "@mut", [["get", "obra.icon", ["loc", [null, [84, 13], [84, 22]]], 0, 0, 0, 0]], [], [], 0, 0]], 0, null, ["loc", [null, [81, 6], [94, 23]]]]],
+          locals: ["obra"],
+          templates: [child0]
+        };
+      })();
+      return {
+        meta: {
+          "revision": "Ember@2.7.0-beta.4",
+          "loc": {
+            "source": null,
+            "start": {
+              "line": 77,
+              "column": 2
+            },
+            "end": {
+              "line": 96,
+              "column": 2
+            }
+          },
+          "moduleName": "app-graphics/templates/map.hbs"
+        },
+        isEmpty: false,
+        arity: 0,
+        cachedFragment: null,
+        hasRendered: false,
+        buildFragment: function buildFragment(dom) {
+          var el0 = dom.createDocumentFragment();
+          var el1 = dom.createTextNode("    ");
+          dom.appendChild(el0, el1);
+          var el1 = dom.createComment("");
+          dom.appendChild(el0, el1);
+          var el1 = dom.createTextNode("\n\n");
+          dom.appendChild(el0, el1);
+          var el1 = dom.createComment("");
+          dom.appendChild(el0, el1);
+          return el0;
+        },
+        buildRenderNodes: function buildRenderNodes(dom, fragment, contextualElement) {
+          var morphs = new Array(2);
+          morphs[0] = dom.createMorphAt(fragment, 1, 1, contextualElement);
+          morphs[1] = dom.createMorphAt(fragment, 3, 3, contextualElement);
+          dom.insertBoundary(fragment, null);
+          return morphs;
+        },
+        statements: [["inline", "tile-layer", [], ["url", "http://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png"], ["loc", [null, [78, 4], [78, 83]]], 0, 0], ["block", "each", [["get", "obrasDesplegables", ["loc", [null, [80, 12], [80, 29]]], 0, 0, 0, 0]], [], 0, null, ["loc", [null, [80, 4], [95, 13]]]]],
+        locals: [],
+        templates: [child0]
+      };
+    })();
+    var child4 = (function () {
+      return {
+        meta: {
+          "revision": "Ember@2.7.0-beta.4",
+          "loc": {
+            "source": null,
+            "start": {
+              "line": 101,
+              "column": 4
+            },
+            "end": {
+              "line": 108,
+              "column": 4
+            }
+          },
+          "moduleName": "app-graphics/templates/map.hbs"
+        },
+        isEmpty: false,
+        arity: 1,
+        cachedFragment: null,
+        hasRendered: false,
+        buildFragment: function buildFragment(dom) {
+          var el0 = dom.createDocumentFragment();
+          var el1 = dom.createTextNode("      ");
+          dom.appendChild(el0, el1);
+          var el1 = dom.createElement("div");
+          dom.setAttribute(el1, "class", "ele");
+          var el2 = dom.createTextNode("\n        ");
+          dom.appendChild(el1, el2);
+          var el2 = dom.createElement("img");
+          dom.appendChild(el1, el2);
+          var el2 = dom.createTextNode("\n        ");
+          dom.appendChild(el1, el2);
+          var el2 = dom.createElement("div");
+          dom.setAttribute(el2, "class", "down");
+          var el3 = dom.createTextNode("\n          ");
+          dom.appendChild(el2, el3);
+          var el3 = dom.createElement("h5");
+          dom.setAttribute(el3, "class", "a");
+          var el4 = dom.createComment("");
+          dom.appendChild(el3, el4);
+          dom.appendChild(el2, el3);
+          var el3 = dom.createTextNode("\n        ");
+          dom.appendChild(el2, el3);
+          dom.appendChild(el1, el2);
+          var el2 = dom.createTextNode("\n      ");
+          dom.appendChild(el1, el2);
+          dom.appendChild(el0, el1);
+          var el1 = dom.createTextNode("\n");
+          dom.appendChild(el0, el1);
+          return el0;
+        },
+        buildRenderNodes: function buildRenderNodes(dom, fragment, contextualElement) {
+          var element0 = dom.childAt(fragment, [1]);
+          var element1 = dom.childAt(element0, [1]);
+          var morphs = new Array(4);
+          morphs[0] = dom.createElementMorph(element0);
+          morphs[1] = dom.createAttrMorph(element1, 'src');
+          morphs[2] = dom.createAttrMorph(element1, 'class');
+          morphs[3] = dom.createMorphAt(dom.childAt(element0, [3, 1]), 0, 0);
+          return morphs;
+        },
+        statements: [["element", "action", ["toggleActiveCategory", ["get", "categoria", ["loc", [null, [102, 55], [102, 64]]], 0, 0, 0, 0]], [], ["loc", [null, [102, 23], [102, 66]]], 0, 0], ["attribute", "src", ["get", "categoria.iconUrl", ["loc", [null, [103, 19], [103, 36]]], 0, 0, 0, 0], 0, 0, 0, 0], ["attribute", "class", ["concat", [["subexpr", "if", [["get", "categoria.activo", ["loc", [null, [103, 51], [103, 67]]], 0, 0, 0, 0], "", "disabled"], [], ["loc", [null, [103, 46], [103, 83]]], 0, 0]], 0, 0, 0, 0, 0], 0, 0, 0, 0], ["content", "categoria.nombre", ["loc", [null, [105, 24], [105, 44]]], 0, 0, 0, 0]],
+        locals: ["categoria"],
+        templates: []
+      };
+    })();
+    return {
+      meta: {
+        "revision": "Ember@2.7.0-beta.4",
+        "loc": {
+          "source": null,
+          "start": {
+            "line": 1,
+            "column": 0
+          },
+          "end": {
+            "line": 118,
+            "column": 0
+          }
+        },
+        "moduleName": "app-graphics/templates/map.hbs"
+      },
+      isEmpty: false,
+      arity: 0,
+      cachedFragment: null,
+      hasRendered: false,
+      buildFragment: function buildFragment(dom) {
+        var el0 = dom.createDocumentFragment();
+        var el1 = dom.createElement("style");
+        var el2 = dom.createTextNode("\n  .leaflet-container {\n    /*width: 1140px;*/\n    height: 600px;\n  }\n\n  .strong {\n    font-weight: bold;\n  }\n\n  .ember-power-select-trigger {\n    width: 51%;\n  }\n\n  img.disabled {\n    filter: gray;\n    filter: grayscale(1);\n    -webkit-filter: grayscale(1);\n  }\n");
+        dom.appendChild(el1, el2);
+        dom.appendChild(el0, el1);
+        var el1 = dom.createTextNode("\n\n");
+        dom.appendChild(el0, el1);
+        var el1 = dom.createElement("div");
+        dom.setAttribute(el1, "class", "topbar");
+        var el2 = dom.createTextNode("\n  ");
+        dom.appendChild(el1, el2);
+        var el2 = dom.createElement("h3");
+        var el3 = dom.createTextNode("Proyectos de inversión pública");
+        dom.appendChild(el2, el3);
+        dom.appendChild(el1, el2);
+        var el2 = dom.createTextNode("\n");
+        dom.appendChild(el1, el2);
+        dom.appendChild(el0, el1);
+        var el1 = dom.createTextNode("\n\n");
+        dom.appendChild(el0, el1);
+        var el1 = dom.createElement("div");
+        dom.setAttribute(el1, "class", "col-lg-4 col-md-4 col-xs-4 left");
+        var el2 = dom.createTextNode("\n  ");
+        dom.appendChild(el1, el2);
+        var el2 = dom.createElement("label");
+        dom.setAttribute(el2, "style", "font-weight: normal; margin-right: 10px;");
+        var el3 = dom.createTextNode("Departamento");
+        dom.appendChild(el2, el3);
+        dom.appendChild(el1, el2);
+        var el2 = dom.createTextNode("\n\n");
+        dom.appendChild(el1, el2);
+        var el2 = dom.createComment("");
+        dom.appendChild(el1, el2);
+        dom.appendChild(el0, el1);
+        var el1 = dom.createTextNode("\n\n");
+        dom.appendChild(el0, el1);
+        var el1 = dom.createElement("div");
+        dom.setAttribute(el1, "class", "col-lg-5 col-md-5 col-xs-5 middle");
+        var el2 = dom.createTextNode("\n  ");
+        dom.appendChild(el1, el2);
+        var el2 = dom.createElement("label");
+        dom.setAttribute(el2, "style", "font-weight: normal; margin-right: 10px;");
+        var el3 = dom.createTextNode("Municipio");
+        dom.appendChild(el2, el3);
+        dom.appendChild(el1, el2);
+        var el2 = dom.createTextNode("\n\n");
+        dom.appendChild(el1, el2);
+        var el2 = dom.createComment("");
+        dom.appendChild(el1, el2);
+        dom.appendChild(el0, el1);
+        var el1 = dom.createTextNode("\n\n");
+        dom.appendChild(el0, el1);
+        var el1 = dom.createElement("div");
+        dom.setAttribute(el1, "class", "col-lg-3 col-md-3 col-xs-3 right");
+        var el2 = dom.createTextNode("\n  ");
+        dom.appendChild(el1, el2);
+        var el2 = dom.createElement("label");
+        dom.setAttribute(el2, "style", "font-weight: normal; margin-right: 10px;");
+        var el3 = dom.createTextNode("Año");
+        dom.appendChild(el2, el3);
+        dom.appendChild(el1, el2);
+        var el2 = dom.createTextNode("\n");
+        dom.appendChild(el1, el2);
+        var el2 = dom.createComment("");
+        dom.appendChild(el1, el2);
+        dom.appendChild(el0, el1);
+        var el1 = dom.createTextNode("\n\n");
+        dom.appendChild(el0, el1);
+        var el1 = dom.createElement("div");
+        dom.setAttribute(el1, "class", "col-md-12");
+        dom.setAttribute(el1, "style", "padding: 0px;");
+        var el2 = dom.createTextNode("\n\n");
+        dom.appendChild(el1, el2);
+        var el2 = dom.createComment("");
+        dom.appendChild(el1, el2);
+        dom.appendChild(el0, el1);
+        var el1 = dom.createTextNode("\n\n");
+        dom.appendChild(el0, el1);
+        var el1 = dom.createElement("div");
+        dom.setAttribute(el1, "class", "next-map");
+        var el2 = dom.createTextNode("\n  ");
+        dom.appendChild(el1, el2);
+        var el2 = dom.createElement("div");
+        dom.setAttribute(el2, "class", "top");
+        var el3 = dom.createTextNode("\n");
+        dom.appendChild(el2, el3);
+        var el3 = dom.createComment("");
+        dom.appendChild(el2, el3);
+        var el3 = dom.createTextNode("\n    ");
+        dom.appendChild(el2, el3);
+        var el3 = dom.createElement("div");
+        dom.setAttribute(el3, "class", "ele");
+        var el4 = dom.createTextNode("\n      ");
+        dom.appendChild(el3, el4);
+        var el4 = dom.createElement("img");
+        dom.setAttribute(el4, "src", "/assets/img/category-icons/todos.jpg");
+        dom.appendChild(el3, el4);
+        var el4 = dom.createTextNode("\n      ");
+        dom.appendChild(el3, el4);
+        var el4 = dom.createElement("div");
+        dom.setAttribute(el4, "class", "down");
+        var el5 = dom.createTextNode("\n        ");
+        dom.appendChild(el4, el5);
+        var el5 = dom.createElement("h5");
+        dom.setAttribute(el5, "class", "a");
+        var el6 = dom.createTextNode("Todos");
+        dom.appendChild(el5, el6);
+        dom.appendChild(el4, el5);
+        var el5 = dom.createTextNode("\n      ");
+        dom.appendChild(el4, el5);
+        dom.appendChild(el3, el4);
+        var el4 = dom.createTextNode("\n    ");
+        dom.appendChild(el3, el4);
+        dom.appendChild(el2, el3);
+        var el3 = dom.createTextNode("\n  ");
+        dom.appendChild(el2, el3);
+        dom.appendChild(el1, el2);
+        var el2 = dom.createTextNode("\n");
+        dom.appendChild(el1, el2);
+        dom.appendChild(el0, el1);
+        var el1 = dom.createTextNode("\n");
+        dom.appendChild(el0, el1);
+        return el0;
+      },
+      buildRenderNodes: function buildRenderNodes(dom, fragment, contextualElement) {
+        var element3 = dom.childAt(fragment, [12, 1]);
+        var element4 = dom.childAt(element3, [3]);
+        var morphs = new Array(6);
+        morphs[0] = dom.createMorphAt(dom.childAt(fragment, [4]), 3, 3);
+        morphs[1] = dom.createMorphAt(dom.childAt(fragment, [6]), 3, 3);
+        morphs[2] = dom.createMorphAt(dom.childAt(fragment, [8]), 3, 3);
+        morphs[3] = dom.createMorphAt(dom.childAt(fragment, [10]), 1, 1);
+        morphs[4] = dom.createMorphAt(element3, 1, 1);
+        morphs[5] = dom.createElementMorph(element4);
+        return morphs;
+      },
+      statements: [["block", "power-select", [], ["selected", ["subexpr", "@mut", [["get", "currentDepartamento", ["loc", [null, [30, 13], [30, 32]]], 0, 0, 0, 0]], [], [], 0, 0], "options", ["subexpr", "@mut", [["get", "departamentosDisponibles", ["loc", [null, [31, 12], [31, 36]]], 0, 0, 0, 0]], [], [], 0, 0], "onchange", ["subexpr", "action", ["selectDepartamento"], [], ["loc", [null, [32, 13], [32, 42]]], 0, 0], "searchField", "nombre", "placeholder", "Departamentos", "allowClear", true], 0, null, ["loc", [null, [29, 2], [39, 19]]]], ["block", "power-select", [], ["selected", ["subexpr", "@mut", [["get", "currentMunicipio", ["loc", [null, [46, 13], [46, 29]]], 0, 0, 0, 0]], [], [], 0, 0], "options", ["subexpr", "@mut", [["get", "municipiosDisponibles", ["loc", [null, [47, 12], [47, 33]]], 0, 0, 0, 0]], [], [], 0, 0], "onchange", ["subexpr", "action", ["selectMunicipio"], [], ["loc", [null, [48, 13], [48, 39]]], 0, 0], "searchField", "nombre", "placeholder", "Municipios", "allowClear", true, "noMatchesMessage", ""], 1, null, ["loc", [null, [45, 2], [56, 19]]]], ["block", "power-select", [], ["selected", ["subexpr", "@mut", [["get", "currentAnio", ["loc", [null, [62, 13], [62, 24]]], 0, 0, 0, 0]], [], [], 0, 0], "options", ["subexpr", "@mut", [["get", "aniosDisponibles", ["loc", [null, [63, 12], [63, 28]]], 0, 0, 0, 0]], [], [], 0, 0], "onchange", ["subexpr", "action", ["selectAnio"], [], ["loc", [null, [64, 13], [64, 34]]], 0, 0], "placeholder", "Años", "allowClear", true, "noMatchesMessage", ""], 2, null, ["loc", [null, [61, 2], [71, 19]]]], ["block", "leaflet-map", [], ["lat", ["subexpr", "@mut", [["get", "currentLatitude", ["loc", [null, [77, 21], [77, 36]]], 0, 0, 0, 0]], [], [], 0, 0], "lng", ["subexpr", "@mut", [["get", "currentLongitude", ["loc", [null, [77, 41], [77, 57]]], 0, 0, 0, 0]], [], [], 0, 0], "zoom", ["subexpr", "@mut", [["get", "currentZoom", ["loc", [null, [77, 63], [77, 74]]], 0, 0, 0, 0]], [], [], 0, 0]], 3, null, ["loc", [null, [77, 2], [96, 18]]]], ["block", "each", [["get", "categoriasIconos", ["loc", [null, [101, 12], [101, 28]]], 0, 0, 0, 0]], [], 4, null, ["loc", [null, [101, 4], [108, 13]]]], ["element", "action", ["toggleAllCategories"], [], ["loc", [null, [110, 21], [110, 53]]], 0, 0]],
+      locals: [],
+      templates: [child0, child1, child2, child3, child4]
     };
   })());
 });
@@ -9207,7 +10225,7 @@ catch(err) {
 /* jshint ignore:start */
 
 if (!runningTests) {
-  require("app-graphics/app")["default"].create({"name":"app-graphics","version":"0.0.0+ec75b0ad"});
+  require("app-graphics/app")["default"].create({"name":"app-graphics","version":"0.0.0+21d25c42"});
 }
 
 /* jshint ignore:end */

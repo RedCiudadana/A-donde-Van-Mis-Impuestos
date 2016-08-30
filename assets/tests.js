@@ -88,6 +88,15 @@ define('app-graphics/tests/components/app-graphics-sidebar.jshint', ['exports'],
     assert.ok(true, 'components/app-graphics-sidebar.js should pass jshint.');
   });
 });
+define('app-graphics/tests/components/escuela-map-spot.jshint', ['exports'], function (exports) {
+  'use strict';
+
+  QUnit.module('JSHint | components/escuela-map-spot.js');
+  QUnit.test('should pass jshint', function (assert) {
+    assert.expect(1);
+    assert.ok(true, 'components/escuela-map-spot.js should pass jshint.');
+  });
+});
 define('app-graphics/tests/components/light-table/cells/municipalidad-link.jshint', ['exports'], function (exports) {
   'use strict';
 
@@ -97,6 +106,15 @@ define('app-graphics/tests/components/light-table/cells/municipalidad-link.jshin
     assert.ok(true, 'components/light-table/cells/municipalidad-link.js should pass jshint.');
   });
 });
+define('app-graphics/tests/components/obras-publicas-map.jshint', ['exports'], function (exports) {
+  'use strict';
+
+  QUnit.module('JSHint | components/obras-publicas-map.js');
+  QUnit.test('should pass jshint', function (assert) {
+    assert.expect(1);
+    assert.ok(true, 'components/obras-publicas-map.js should pass jshint.');
+  });
+});
 define('app-graphics/tests/controllers/index.jshint', ['exports'], function (exports) {
   'use strict';
 
@@ -104,6 +122,15 @@ define('app-graphics/tests/controllers/index.jshint', ['exports'], function (exp
   QUnit.test('should pass jshint', function (assert) {
     assert.expect(1);
     assert.ok(true, 'controllers/index.js should pass jshint.');
+  });
+});
+define('app-graphics/tests/controllers/map.jshint', ['exports'], function (exports) {
+  'use strict';
+
+  QUnit.module('JSHint | controllers/map.js');
+  QUnit.test('should pass jshint', function (assert) {
+    assert.expect(1);
+    assert.ok(true, 'controllers/map.js should pass jshint.');
   });
 });
 define('app-graphics/tests/controllers/ranking/base-ranking.jshint', ['exports'], function (exports) {
@@ -1808,6 +1835,146 @@ define('app-graphics/tests/integration/components/app-graphics-sidebar-test.jshi
     assert.ok(true, 'integration/components/app-graphics-sidebar-test.js should pass jshint.');
   });
 });
+define('app-graphics/tests/integration/components/escuela-map-spot-test', ['exports', 'ember-qunit'], function (exports, _emberQunit) {
+
+  (0, _emberQunit.moduleForComponent)('escuela-map-spot', 'Integration | Component | escuela map spot', {
+    integration: true
+  });
+
+  (0, _emberQunit.test)('it renders', function (assert) {
+    // Set any properties with this.set('myProperty', 'value');
+    // Handle any actions with this.on('myAction', function(val) { ... });
+
+    this.render(Ember.HTMLBars.template((function () {
+      return {
+        meta: {
+          'revision': 'Ember@2.7.0-beta.4',
+          'loc': {
+            'source': null,
+            'start': {
+              'line': 1,
+              'column': 0
+            },
+            'end': {
+              'line': 1,
+              'column': 20
+            }
+          }
+        },
+        isEmpty: false,
+        arity: 0,
+        cachedFragment: null,
+        hasRendered: false,
+        buildFragment: function buildFragment(dom) {
+          var el0 = dom.createDocumentFragment();
+          var el1 = dom.createComment('');
+          dom.appendChild(el0, el1);
+          return el0;
+        },
+        buildRenderNodes: function buildRenderNodes(dom, fragment, contextualElement) {
+          var morphs = new Array(1);
+          morphs[0] = dom.createMorphAt(fragment, 0, 0, contextualElement);
+          dom.insertBoundary(fragment, 0);
+          dom.insertBoundary(fragment, null);
+          return morphs;
+        },
+        statements: [['content', 'escuela-map-spot', ['loc', [null, [1, 0], [1, 20]]], 0, 0, 0, 0]],
+        locals: [],
+        templates: []
+      };
+    })()));
+
+    assert.equal(this.$().text().trim(), '');
+
+    // Template block usage:
+    this.render(Ember.HTMLBars.template((function () {
+      var child0 = (function () {
+        return {
+          meta: {
+            'revision': 'Ember@2.7.0-beta.4',
+            'loc': {
+              'source': null,
+              'start': {
+                'line': 2,
+                'column': 4
+              },
+              'end': {
+                'line': 4,
+                'column': 4
+              }
+            }
+          },
+          isEmpty: false,
+          arity: 0,
+          cachedFragment: null,
+          hasRendered: false,
+          buildFragment: function buildFragment(dom) {
+            var el0 = dom.createDocumentFragment();
+            var el1 = dom.createTextNode('      template block text\n');
+            dom.appendChild(el0, el1);
+            return el0;
+          },
+          buildRenderNodes: function buildRenderNodes() {
+            return [];
+          },
+          statements: [],
+          locals: [],
+          templates: []
+        };
+      })();
+
+      return {
+        meta: {
+          'revision': 'Ember@2.7.0-beta.4',
+          'loc': {
+            'source': null,
+            'start': {
+              'line': 1,
+              'column': 0
+            },
+            'end': {
+              'line': 5,
+              'column': 2
+            }
+          }
+        },
+        isEmpty: false,
+        arity: 0,
+        cachedFragment: null,
+        hasRendered: false,
+        buildFragment: function buildFragment(dom) {
+          var el0 = dom.createDocumentFragment();
+          var el1 = dom.createTextNode('\n');
+          dom.appendChild(el0, el1);
+          var el1 = dom.createComment('');
+          dom.appendChild(el0, el1);
+          var el1 = dom.createTextNode('  ');
+          dom.appendChild(el0, el1);
+          return el0;
+        },
+        buildRenderNodes: function buildRenderNodes(dom, fragment, contextualElement) {
+          var morphs = new Array(1);
+          morphs[0] = dom.createMorphAt(fragment, 1, 1, contextualElement);
+          return morphs;
+        },
+        statements: [['block', 'escuela-map-spot', [], [], 0, null, ['loc', [null, [2, 4], [4, 25]]]]],
+        locals: [],
+        templates: [child0]
+      };
+    })()));
+
+    assert.equal(this.$().text().trim(), 'template block text');
+  });
+});
+define('app-graphics/tests/integration/components/escuela-map-spot-test.jshint', ['exports'], function (exports) {
+  'use strict';
+
+  QUnit.module('JSHint | integration/components/escuela-map-spot-test.js');
+  QUnit.test('should pass jshint', function (assert) {
+    assert.expect(1);
+    assert.ok(true, 'integration/components/escuela-map-spot-test.js should pass jshint.');
+  });
+});
 define('app-graphics/tests/integration/components/light-table/cells/municipalidad-link-test', ['exports', 'ember', 'ember-qunit', 'ember-light-table'], function (exports, _ember, _emberQunit, _emberLightTable) {
 
   (0, _emberQunit.moduleForComponent)('light-table/cells/municipalidad-link', 'Integration | Component | Cells | municipalidad-link', {
@@ -1911,6 +2078,146 @@ define('app-graphics/tests/integration/components/light-table/cells/municipalida
     assert.ok(false, 'integration/components/light-table/cells/municipalidad-link-test.js should pass jshint.\nintegration/components/light-table/cells/municipalidad-link-test.js: line 1, col 8, \'Ember\' is defined but never used.\n\n1 error');
   });
 });
+define('app-graphics/tests/integration/components/obras-publicas-map-test', ['exports', 'ember-qunit'], function (exports, _emberQunit) {
+
+  (0, _emberQunit.moduleForComponent)('obras-publicas-map', 'Integration | Component | obras publicas map', {
+    integration: true
+  });
+
+  (0, _emberQunit.test)('it renders', function (assert) {
+    // Set any properties with this.set('myProperty', 'value');
+    // Handle any actions with this.on('myAction', function(val) { ... });
+
+    this.render(Ember.HTMLBars.template((function () {
+      return {
+        meta: {
+          'revision': 'Ember@2.7.0-beta.4',
+          'loc': {
+            'source': null,
+            'start': {
+              'line': 1,
+              'column': 0
+            },
+            'end': {
+              'line': 1,
+              'column': 22
+            }
+          }
+        },
+        isEmpty: false,
+        arity: 0,
+        cachedFragment: null,
+        hasRendered: false,
+        buildFragment: function buildFragment(dom) {
+          var el0 = dom.createDocumentFragment();
+          var el1 = dom.createComment('');
+          dom.appendChild(el0, el1);
+          return el0;
+        },
+        buildRenderNodes: function buildRenderNodes(dom, fragment, contextualElement) {
+          var morphs = new Array(1);
+          morphs[0] = dom.createMorphAt(fragment, 0, 0, contextualElement);
+          dom.insertBoundary(fragment, 0);
+          dom.insertBoundary(fragment, null);
+          return morphs;
+        },
+        statements: [['content', 'obras-publicas-map', ['loc', [null, [1, 0], [1, 22]]], 0, 0, 0, 0]],
+        locals: [],
+        templates: []
+      };
+    })()));
+
+    assert.equal(this.$().text().trim(), '');
+
+    // Template block usage:
+    this.render(Ember.HTMLBars.template((function () {
+      var child0 = (function () {
+        return {
+          meta: {
+            'revision': 'Ember@2.7.0-beta.4',
+            'loc': {
+              'source': null,
+              'start': {
+                'line': 2,
+                'column': 4
+              },
+              'end': {
+                'line': 4,
+                'column': 4
+              }
+            }
+          },
+          isEmpty: false,
+          arity: 0,
+          cachedFragment: null,
+          hasRendered: false,
+          buildFragment: function buildFragment(dom) {
+            var el0 = dom.createDocumentFragment();
+            var el1 = dom.createTextNode('      template block text\n');
+            dom.appendChild(el0, el1);
+            return el0;
+          },
+          buildRenderNodes: function buildRenderNodes() {
+            return [];
+          },
+          statements: [],
+          locals: [],
+          templates: []
+        };
+      })();
+
+      return {
+        meta: {
+          'revision': 'Ember@2.7.0-beta.4',
+          'loc': {
+            'source': null,
+            'start': {
+              'line': 1,
+              'column': 0
+            },
+            'end': {
+              'line': 5,
+              'column': 2
+            }
+          }
+        },
+        isEmpty: false,
+        arity: 0,
+        cachedFragment: null,
+        hasRendered: false,
+        buildFragment: function buildFragment(dom) {
+          var el0 = dom.createDocumentFragment();
+          var el1 = dom.createTextNode('\n');
+          dom.appendChild(el0, el1);
+          var el1 = dom.createComment('');
+          dom.appendChild(el0, el1);
+          var el1 = dom.createTextNode('  ');
+          dom.appendChild(el0, el1);
+          return el0;
+        },
+        buildRenderNodes: function buildRenderNodes(dom, fragment, contextualElement) {
+          var morphs = new Array(1);
+          morphs[0] = dom.createMorphAt(fragment, 1, 1, contextualElement);
+          return morphs;
+        },
+        statements: [['block', 'obras-publicas-map', [], [], 0, null, ['loc', [null, [2, 4], [4, 27]]]]],
+        locals: [],
+        templates: [child0]
+      };
+    })()));
+
+    assert.equal(this.$().text().trim(), 'template block text');
+  });
+});
+define('app-graphics/tests/integration/components/obras-publicas-map-test.jshint', ['exports'], function (exports) {
+  'use strict';
+
+  QUnit.module('JSHint | integration/components/obras-publicas-map-test.js');
+  QUnit.test('should pass jshint', function (assert) {
+    assert.expect(1);
+    assert.ok(true, 'integration/components/obras-publicas-map-test.js should pass jshint.');
+  });
+});
 define('app-graphics/tests/resolver.jshint', ['exports'], function (exports) {
   'use strict';
 
@@ -1945,6 +2252,15 @@ define('app-graphics/tests/routes/index.jshint', ['exports'], function (exports)
   QUnit.test('should pass jshint', function (assert) {
     assert.expect(1);
     assert.ok(true, 'routes/index.js should pass jshint.');
+  });
+});
+define('app-graphics/tests/routes/map.jshint', ['exports'], function (exports) {
+  'use strict';
+
+  QUnit.module('JSHint | routes/map.js');
+  QUnit.test('should pass jshint', function (assert) {
+    assert.expect(1);
+    assert.ok(false, 'routes/map.js should pass jshint.\nroutes/map.js: line 21, col 19, \'L\' is not defined.\nroutes/map.js: line 23, col 25, \'L\' is not defined.\n\n2 errors');
   });
 });
 define('app-graphics/tests/routes/municipio.jshint', ['exports'], function (exports) {
@@ -2010,6 +2326,15 @@ define('app-graphics/tests/routes/ranking/presupuesto.jshint', ['exports'], func
     assert.ok(true, 'routes/ranking/presupuesto.js should pass jshint.');
   });
 });
+define('app-graphics/tests/services/tabletop-mapas.jshint', ['exports'], function (exports) {
+  'use strict';
+
+  QUnit.module('JSHint | services/tabletop-mapas.js');
+  QUnit.test('should pass jshint', function (assert) {
+    assert.expect(1);
+    assert.ok(true, 'services/tabletop-mapas.js should pass jshint.');
+  });
+});
 define('app-graphics/tests/services/tabletop.jshint', ['exports'], function (exports) {
   'use strict';
 
@@ -2052,6 +2377,28 @@ define('app-graphics/tests/unit/controllers/index-test.jshint', ['exports'], fun
   QUnit.test('should pass jshint', function (assert) {
     assert.expect(1);
     assert.ok(true, 'unit/controllers/index-test.js should pass jshint.');
+  });
+});
+define('app-graphics/tests/unit/controllers/map-test', ['exports', 'ember-qunit'], function (exports, _emberQunit) {
+
+  (0, _emberQunit.moduleFor)('controller:map', 'Unit | Controller | map', {
+    // Specify the other units that are required for this test.
+    // needs: ['controller:foo']
+  });
+
+  // Replace this with your real tests.
+  (0, _emberQunit.test)('it exists', function (assert) {
+    var controller = this.subject();
+    assert.ok(controller);
+  });
+});
+define('app-graphics/tests/unit/controllers/map-test.jshint', ['exports'], function (exports) {
+  'use strict';
+
+  QUnit.module('JSHint | unit/controllers/map-test.js');
+  QUnit.test('should pass jshint', function (assert) {
+    assert.expect(1);
+    assert.ok(true, 'unit/controllers/map-test.js should pass jshint.');
   });
 });
 define('app-graphics/tests/unit/controllers/ranking/presupuesto-test', ['exports', 'ember-qunit'], function (exports, _emberQunit) {
@@ -2118,6 +2465,27 @@ define('app-graphics/tests/unit/routes/index-test.jshint', ['exports'], function
     assert.ok(true, 'unit/routes/index-test.js should pass jshint.');
   });
 });
+define('app-graphics/tests/unit/routes/map-test', ['exports', 'ember-qunit'], function (exports, _emberQunit) {
+
+  (0, _emberQunit.moduleFor)('route:map', 'Unit | Route | map', {
+    // Specify the other units that are required for this test.
+    // needs: ['controller:foo']
+  });
+
+  (0, _emberQunit.test)('it exists', function (assert) {
+    var route = this.subject();
+    assert.ok(route);
+  });
+});
+define('app-graphics/tests/unit/routes/map-test.jshint', ['exports'], function (exports) {
+  'use strict';
+
+  QUnit.module('JSHint | unit/routes/map-test.js');
+  QUnit.test('should pass jshint', function (assert) {
+    assert.expect(1);
+    assert.ok(true, 'unit/routes/map-test.js should pass jshint.');
+  });
+});
 define('app-graphics/tests/unit/routes/municipio-test', ['exports', 'ember-qunit'], function (exports, _emberQunit) {
 
   (0, _emberQunit.moduleFor)('route:municipio', 'Unit | Route | municipio', {
@@ -2179,6 +2547,28 @@ define('app-graphics/tests/unit/routes/ranking/presupuesto-test.jshint', ['expor
   QUnit.test('should pass jshint', function (assert) {
     assert.expect(1);
     assert.ok(true, 'unit/routes/ranking/presupuesto-test.js should pass jshint.');
+  });
+});
+define('app-graphics/tests/unit/services/tabletop-mapas-test', ['exports', 'ember-qunit'], function (exports, _emberQunit) {
+
+  (0, _emberQunit.moduleFor)('service:tabletop-mapas', 'Unit | Service | tabletop mapas', {
+    // Specify the other units that are required for this test.
+    // needs: ['service:foo']
+  });
+
+  // Replace this with your real tests.
+  (0, _emberQunit.test)('it exists', function (assert) {
+    var service = this.subject();
+    assert.ok(service);
+  });
+});
+define('app-graphics/tests/unit/services/tabletop-mapas-test.jshint', ['exports'], function (exports) {
+  'use strict';
+
+  QUnit.module('JSHint | unit/services/tabletop-mapas-test.js');
+  QUnit.test('should pass jshint', function (assert) {
+    assert.expect(1);
+    assert.ok(true, 'unit/services/tabletop-mapas-test.js should pass jshint.');
   });
 });
 define('app-graphics/tests/unit/services/tabletop-test', ['exports', 'ember-qunit'], function (exports, _emberQunit) {
