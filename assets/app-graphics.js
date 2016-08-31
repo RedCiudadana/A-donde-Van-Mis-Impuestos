@@ -886,6 +886,9 @@ define('app-graphics/components/power-select/trigger', ['exports', 'ember-power-
     }
   });
 });
+define('app-graphics/components/presupuestos-municipales', ['exports', 'ember'], function (exports, _ember) {
+  exports['default'] = _ember['default'].Component.extend({});
+});
 define('app-graphics/components/resize-detector', ['exports', 'ember-element-resize-detector/components/resize-detector'], function (exports, _emberElementResizeDetectorComponentsResizeDetector) {
   Object.defineProperty(exports, 'default', {
     enumerable: true,
@@ -2021,7 +2024,7 @@ define("app-graphics/templates/application", ["exports"], function (exports) {
             "column": 0
           },
           "end": {
-            "line": 10,
+            "line": 8,
             "column": 0
           }
         },
@@ -2033,7 +2036,28 @@ define("app-graphics/templates/application", ["exports"], function (exports) {
       hasRendered: false,
       buildFragment: function buildFragment(dom) {
         var el0 = dom.createDocumentFragment();
-        var el1 = dom.createComment("");
+        var el1 = dom.createElement("div");
+        dom.setAttribute(el1, "class", "container");
+        var el2 = dom.createTextNode("\n  ");
+        dom.appendChild(el1, el2);
+        var el2 = dom.createElement("div");
+        dom.setAttribute(el2, "class", "row");
+        var el3 = dom.createTextNode("\n    ");
+        dom.appendChild(el2, el3);
+        var el3 = dom.createElement("div");
+        dom.setAttribute(el3, "class", "col-lg-12");
+        var el4 = dom.createTextNode("\n      ");
+        dom.appendChild(el3, el4);
+        var el4 = dom.createComment("");
+        dom.appendChild(el3, el4);
+        var el4 = dom.createTextNode("\n    ");
+        dom.appendChild(el3, el4);
+        dom.appendChild(el2, el3);
+        var el3 = dom.createTextNode("\n  ");
+        dom.appendChild(el2, el3);
+        dom.appendChild(el1, el2);
+        var el2 = dom.createTextNode("\n");
+        dom.appendChild(el1, el2);
         dom.appendChild(el0, el1);
         var el1 = dom.createTextNode("\n");
         dom.appendChild(el0, el1);
@@ -2041,11 +2065,10 @@ define("app-graphics/templates/application", ["exports"], function (exports) {
       },
       buildRenderNodes: function buildRenderNodes(dom, fragment, contextualElement) {
         var morphs = new Array(1);
-        morphs[0] = dom.createMorphAt(fragment, 0, 0, contextualElement);
-        dom.insertBoundary(fragment, 0);
+        morphs[0] = dom.createMorphAt(dom.childAt(fragment, [0, 1, 1]), 1, 1);
         return morphs;
       },
-      statements: [["content", "ember-islands", ["loc", [null, [9, 0], [9, 17]]], 0, 0, 0, 0]],
+      statements: [["content", "outlet", ["loc", [null, [4, 6], [4, 16]]], 0, 0, 0, 0]],
       locals: [],
       templates: []
     };
@@ -8237,6 +8260,43 @@ define("app-graphics/templates/components/obras-publicas-map", ["exports"], func
     };
   })());
 });
+define("app-graphics/templates/components/presupuestos-municipales", ["exports"], function (exports) {
+  exports["default"] = Ember.HTMLBars.template((function () {
+    return {
+      meta: {
+        "revision": "Ember@2.7.0-beta.4",
+        "loc": {
+          "source": null,
+          "start": {
+            "line": 1,
+            "column": 0
+          },
+          "end": {
+            "line": 2,
+            "column": 0
+          }
+        },
+        "moduleName": "app-graphics/templates/components/presupuestos-municipales.hbs"
+      },
+      isEmpty: false,
+      arity: 0,
+      cachedFragment: null,
+      hasRendered: false,
+      buildFragment: function buildFragment(dom) {
+        var el0 = dom.createDocumentFragment();
+        var el1 = dom.createTextNode("Presupuestos municipales HBS file contents\n");
+        dom.appendChild(el0, el1);
+        return el0;
+      },
+      buildRenderNodes: function buildRenderNodes() {
+        return [];
+      },
+      statements: [],
+      locals: [],
+      templates: []
+    };
+  })());
+});
 define("app-graphics/templates/index", ["exports"], function (exports) {
   exports["default"] = Ember.HTMLBars.template((function () {
     var child0 = (function () {
@@ -10202,22 +10262,7 @@ define("app-graphics/templates/ranking/presupuesto", ["exports"], function (expo
 /* jshint ignore:start */
 
 define('app-graphics/config/environment', ['ember'], function(Ember) {
-  var prefix = 'app-graphics';
-/* jshint ignore:start */
-
-try {
-  var metaName = prefix + '/config/environment';
-  var rawConfig = Ember['default'].$('meta[name="' + metaName + '"]').attr('content');
-  var config = JSON.parse(unescape(rawConfig));
-
-  return { 'default': config };
-}
-catch(err) {
-  throw new Error('Could not read config from meta tag with name "' + metaName + '".');
-}
-
-/* jshint ignore:end */
-
+  return { 'default': {"modulePrefix":"app-graphics","environment":"development","rootURL":"/","locationType":"hash","EmberENV":{"FEATURES":{}},"APP":{"rootElement":"#app-graphics","name":"app-graphics","version":"0.0.0+af381cc7"},"exportApplicationGlobal":true}};
 });
 
 /* jshint ignore:end */
@@ -10225,7 +10270,7 @@ catch(err) {
 /* jshint ignore:start */
 
 if (!runningTests) {
-  require("app-graphics/app")["default"].create({"name":"app-graphics","version":"0.0.0+21d25c42"});
+  require("app-graphics/app")["default"].create({"rootElement":"#app-graphics","name":"app-graphics","version":"0.0.0+af381cc7"});
 }
 
 /* jshint ignore:end */
