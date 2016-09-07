@@ -1,0 +1,87 @@
+---
+layout: default
+title: Inicio
+---
+
+<script src="/js/tabletop.js"></script>
+<script src="/js/accounting.js"></script>
+
+<br>
+<h2 class="main-header grey-text">
+  <b>
+    Presupuesto 2017
+    <br>Conoce todo sobre el Presupuesto de la nación.
+  </b>
+</h2>
+
+<div class="container">
+  <div class="row spaced text-center grey-text">
+
+    <div class="col-md-12 heavy-spaced">
+ 
+        <strong>Presupuesto Abierto 2017</strong>
+ 
+      <a href="http://www.minfin.gob.gt/index.php/2012-07-23-20-59-21">
+        <img
+          class="responsive-banner"
+          class="responsive-banner"
+          src="/img/index-b/a-donde-van-mis-impuestos.png"
+          alt="¿A dónde van mis impuestos?"
+        >
+      </a>
+    </div>
+
+    <div class="col-md-12 heavy-spaced">
+        
+        <strong>Proyecto de Presupuesto General - Ejercicio Fiscal 2017</strong>
+        
+      <a href="#">
+        <img
+          class="responsive-banner"
+          src="/img/index-b/conoce-tu-presupuesto.png"
+          alt="Arma tu presupuesto"
+        >
+      </a>
+    </div>
+
+    <div class="col-md-12 heavy-spaced">
+           
+        <strong>Presupuesto General de Egresos e Ingresos - Ejercicio Fiscal 2017</strong>
+        
+      <a href="#">
+        <img
+          class="responsive-banner"
+          src="/img/index-b/conoce-tu-presupuesto.png"
+          alt="Proyectos de inversión pública"
+        >
+      </a>
+    </div>
+
+  </div>
+</div>
+
+<script>
+  $(function () {
+    // Informacion index presupuesto
+    var spreadhsheetUrl = 'https://docs.google.com/spreadsheets/d/1mJujk4sZ20361Gp1UM-hOEMGL-qwmx6N-rHJE7ydhJY/pubhtml';
+
+    Tabletop.init({
+      key: spreadhsheetUrl,
+      callback: function(data, tabletop) {
+        var dataInicial = tabletop.sheets('data-index').all();
+
+        if (dataInicial.length === 0) {
+          console.log('Error');
+
+          return;
+        }
+
+        dataInicial = dataInicial[0];
+
+        $('#presupuestoTotal').html(accounting.formatMoney(dataInicial.presupuestoTotal, "Q", 2));
+        $('#presupuestoEjecutado').html(accounting.formatMoney(dataInicial.presupuestoEjecutado, "Q", 2));
+        $('#porcentajeEjecucion').html(accounting.formatNumber(dataInicial.porcentajeEjecucion, 0) + "%");
+      }
+    });
+  });
+</script>
