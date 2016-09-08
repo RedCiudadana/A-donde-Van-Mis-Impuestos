@@ -25,116 +25,69 @@ title: ¿A dónde van mis impuestos?
     h3.page-header {
         margin-bottom: 5px;
     }
+
+    .graphics-div {
+        margin-bottom: 25px;
+    }
 </style>
 
-<h3 class="page-header">Conoce tu <b>Presupuesto</b> para el año 2016</h3>
+<div class="text-center">
+    <h3>Conoce tu <b>Presupuesto</b> para el año 2016</h3>
+</div>
 
-<div id="bubbletree" style="width: 650px; height: 650px;"></div>
+<!-- TODO: Revisar si aplica parametrizar esta onda al viewport-->
+<div id="bubbletree" style="width: 650px; height: 650px; background-color: #ffffff">
+    <div class="text-center" style="padding-top: 120px;">Cargando</div>
+</div>
+
+<div class="text-center">
+    <h3><strong>Visualizaciones</strong></h3>
+</div>
+
+<ul id="graphics-links" class="nav nav-pills nav-justified" style="font-size: 14px; margin-bottom: 25px;">
+  <li role="presentation">
+    <a href="#PresupuestoTotal">Presupuesto de Egresos</a>
+  </li>
+  <li role="presentation">
+    <a href="#Gasto">Tipo de Gasto</a>
+  </li>
+  <li role="presentation">
+    <a href="#SubgrupoGasto">Subgrupo Tipo de Gasto</a>
+  </li>
+  <li role="presentation">
+    <a href="#PorFinalidad">Por Finalidad</a>
+  </li>
+  <li role="presentation">
+    <a href="#PorInstitucion">Por Institución</a>
+  </li>
+</ul>
+
+<section id="PresupuestoTotal" class="graphics-div">
+    <div class="text-center">[cargando]</div>
+</section>
+
+<section id="Gasto" class="graphics-div">
+    <div class="text-center">[cargando]</div>
+</section>
+
+<section id="SubgrupoGasto" class="graphics-div">
+    <div class="text-center">[cargando]</div>
+</section>
+
+<section id="PorFinalidad" class="graphics-div">
+    <div class="text-center">[cargando]</div>
+</section>
+
+<section id="PorInstitucion" class="graphics-div">
+    <div class="text-center">[cargando]</div>
+</section>
 
 <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
 <script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
 <script src="/js/openspending.js"></script>
-
-<script 'text/javascript'>
-
-    var data = {
-        currency: "GTQ",
-        aggregated_csv_url: "csv/by-cofog1-then-cofog2.csv",
-        amount_col_name: "amount"
-    };
-
-    var options = {
-        data: data,
-        style: {
-            labels: {
-                "root": "Presupuesto General de Guatemala 2016",
-                "01": "Servicios Públicos Generales",
-                "02": "Defensa",
-                "03": "Orden Público y Seguridad", 
-                "04": "Asuntos Económicos",
-                "05": "Protección del medio ambiente",
-                "06": "Vivienda y servicios comunitarios", 
-                "07": "Salud",
-                "08": "Actividades recreativas, cultura y religión",
-                "09": "Educación", 
-                "010": "Protección Social",
-                "01.1": "Presidencia",
-                "01.2": "Relaciones Exteriores",
-                "01.3": "Secretarias y otras dependencias del Ejecutivo",
-                "01.8": "Obligaciones del Estado a Cargo del Tesoro",
-                "01.7": "Deuda Publica",
-                "01.4": "Procuraduría General de la Nación",
-                "02.1": "Defensa Nacional",
-                "03.6": "Gobernación",
-                "04.1": "Finanzas Publicas",
-                "04.2": "Economía",
-                "04.3": "Agricultura Ganadería y Alimentación",
-                "04.4": "Energía y Minas",
-                "05.1": "Ambiente y Recursos Naturales",
-                "06.1": "Comunicaciones Infraestructura y Vivienda",
-                "07.1": "Productos, útiles y equipo médicos",
-                "07.2": "Servicios para pacientes externos",
-                "07.3": "Servicios hospitalarios",
-                "07.4": "Servicios de salud pública",
-                "07.5": "Investigación y desarrollo relacionados con la salud",
-                "07.6": "Salud n.e.p.",
-                "08.1": "Servicios Deportivos y de Recreación",
-                "08.2": "Servicios Culturales",
-                "08.3": "Servicios de Radio, Televisión y Servicios Editoriales",
-                "08.6": "Actividades Deportivas, Recreativas, Cultura y Religión n.c.d",
-                "09.1": "Educación Preprimaria y Primaria",
-                "09.2": "Educación Media",
-                "09.3": "Educación Universitaria o Superior",
-                "09.4": "Educación no Atribuible a Ningún Nivel Escolarizado",
-                "09.5": "Servicios Auxiliares de la Educación",
-                "09.6": "Investigación y Desarrollo Relacionados con la Educación",
-                "09.7": "Educación n.c.d",
-                "010.1": "Enfermedad, Funcionamiento Corporal y Discapacidad",
-                "010.2": "Edad Avanzada",
-                "010.3": "Familia e Hijos",
-                "010.4": "Desempleo",
-                "010.5": "Vivienda",
-                "010.6": "Otros Riesgos de Exclusión Social",
-                "010.7": "Protección Social n.c.d",
-            },
-            bubbletype: ['plain', 'icon']
-        }
-    };
-
-    $('#bubbletree').bubbletree(options);
-</script>
-
-    <div class="container">
-      <div class="row spaced">
-        <div class="col-md-6">
-          <a href="y-mis-impuestos.html">
-            <img src="img/Cuadro1.gif" alt="¿A dónde van mis impuestos?" class="img-responsive">
-          </a>
-        </div>
-        <div class="col-md-6">
-          <a href="http://arma.adondevanmisimpuestos.gt/">
-            <img src="img/Cuadro2.gif" alt="Arma tu Presupuesto" class="img-responsive"/>
-          </a>
-        </div>
-      </div>
-      
-      <div class="container">
-      <div class="row spaced">
-        <div class="col-md-4">
-          <a href="bubbletree-map.html">
-            <img src="img/ÍCONOS/ICONOS-70.png" alt="Presupuesto 2015" style="height: 300px; width: 300px;">
-          </a>
-        </div>
-        <div class="col-md-4">
-          <a href="analisis.html">
-            <img src="img/ÍCONOS/ICONOS-71.png" alt="Presupuesto 2015" style="height: 300px; width: 300px;"/>
-          </a>
-        </div>
-        <div class="col-md-4">
-          <a href="y-mis-impuestos.html">
-            <img src="img/ÍCONOS/ICONOS-72.png" alt="Presupuesto 2015" style="height: 300px; width: 300px;"/>
-          </a>
-        </div>
-      </div>
-    </div>
-
+<script src="/js/bubbletree-map.js"></script>
+<script src="/js/visualizaciones.js"></script>
+<script src="http://code.highcharts.com/highcharts.js"></script>
+<script src="https://code.highcharts.com/modules/heatmap.js"></script>
+<script src="https://code.highcharts.com/modules/treemap.js"></script>
+<script src="/js/tabletop.js"></script>

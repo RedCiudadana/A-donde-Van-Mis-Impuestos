@@ -4,8 +4,7 @@ html {
 
 body {
   min-height: 80%;
-  /*background-color: #eceff6;*/
-  background-color: #ffffff;
+  background-color: #eceff6;
 }
 
 body, p, blockquote p {
