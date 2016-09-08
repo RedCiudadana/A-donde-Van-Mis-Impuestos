@@ -1,11 +1,11 @@
-
 html {
   background-color: #783c8f;
 }
 
 body {
   min-height: 80%;
-  background-color: #eceff6;
+  /*background-color: #eceff6;*/
+  background-color: #ffffff;
 }
 
 body, p, blockquote p {

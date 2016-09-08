@@ -32,7 +32,7 @@ title: Inicio
           <div class="col-md-1"></div>
           <div class="col-md-10 text-left">
 
-            <div>GASTO DEVENGADO (Actualizado SICOIN - 26/08/2016)</div>
+            <div>GASTO DEVENGADO (Actualizado SICOIN - <span id="fechaActualizacionSicoin">[cargando]</span>)</div>
             <div>
               <span id="presupuestoEjecutado" style="font-size: 28px;"><strong>[cargando]</strong></span>
               <span style="font-size: 12px; margin-left: 10px;">MILLONES DE QUETZALES</span>
@@ -146,6 +146,7 @@ title: Inicio
         $('#presupuestoTotal').html(accounting.formatMoney(dataInicial.presupuestoTotal, "Q", 2));
         $('#presupuestoEjecutado').html(accounting.formatMoney(dataInicial.presupuestoEjecutado, "Q", 2));
         $('#porcentajeEjecucion').html(accounting.formatNumber(dataInicial.porcentajeEjecucion, 0) + "%");
+        $('#fechaActualizacionSicoin').html(dataInicial.fechaActualizacionSicoin);
       }
     });
   });
