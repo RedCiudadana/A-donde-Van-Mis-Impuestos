@@ -2,171 +2,183 @@
 layout: default
 title: Metodología
 ---
-<h1 class="page-title">Metodología</h1>
 
-<menu class="sections section_separator">
-      <div class="sep"></div>
-      <a href="#Acerca">Proyecto: ¿A dónde van mis impuestos?</a>
-      <a href="#Funcionalidades">Funcionalidades</a>
-      <a href="#Metodologia">Metodologia</a>
-      <a href="#FAQS">Metodologia</a>
-      <a href="#Fuentes">Fuentes y Datos</a>
-      <a href="#RedCiudadana">Quiénes somos</a>
-      <a href="#Equipo">Equipo</a>
-      <a href="#Agradecimientos">Agradeciemientos</a>
-      <a href="#Contacto">Contacto</a>
-      <div class="sep"></div>
-    </menu>
+<style>
+    .openspending-bt .label2 span {
+        background-color: transparent;
+    }
 
+    section {
+        margin-bottom: 25px;
+    }
 
-	<section id="Acerca">
-	<h2>Proyecto: ¿A dónde van mis impuestos?</h2>
-	
-	<p><strong>Acerca de:</strong> 
-		El proyecto tiene como objetivo promover la transparencia y la participación ciudadana a través del análisis y la visualización de información acerca del gasto público de Guatemala.
-	</p>
-        </section>
-	
-	<section id="Funcionalidades">
-	<h2>Funcionalidades</h2>
-	<ul>
-          <li><strong>¿A dónde van mis impuestos?</strong> Conoce como tus impuestos son invertidos por el Gobierno.</li>
-          <li><strong>Arma tu presupuesto</strong> Arma tu presupuesto y haz publica tu forma de priorizar las necesidades de nuestro pais.</li>
-          <li><strong>Obras Publicas Municipales</strong> Asigna de forma interactiva el presupuesto para las necesidades de nuestro país.</li>
-          <li><strong>Presupuestos Municipales</strong> Consulta, analiza y compara los presupuestos municipales de Guatemala.</li>
-          <li><strong>Conoce tu presupuesto:</strong> Conoce el presupuesto de egresos de Guatemala y en qué se gasta.</li>
-          <li><strong>Glosario</strong> Conoce los principales términos presupuestarios y financieros del Presupuesto.</li>
-        </ul>
-		
-	</section>
-	
-	<section id="Metodologia">
-		
-	</section>
-	
-	<section id="FAQS">
-		
-	</section>
-	
-	<section id="Fuentes">
-		
-	</section>
-	
-	<section id="RedCiudadana">
-		
-	</section>
-	
-	<section id="Equipo">
-		
-	</section>
-	
-	<section id="Agradecimientos">
-		
-	</section>
-	
-	<section id="Contacto">
-		
-	</section>
+    h4 {
+        margin-top: 15px;
+    }
+</style>
 
-
-	<div class="row spaced">
-		<ol start="1">
-		<br><li><b><b>  Recopilación de información sobre el Presupuesto</b></b></li>
-		</ol>
-		<span style="font-weight: 400;">Como primer paso buscamos los datos disponibles sobre el Presupuesto General de Ingresos y Egresos de la Nación. El </span><a href="http://www.minfin.gob.gt/"><span style="font-weight: 400;">Ministerio de Finanzas </span></a><span style="font-weight: 400;">cuenta con una página web donde mantienen la información. Extrajimos los datos de la página en formato html y luego los convertimos a una base de datos en formato csv. </span>
-		<br>
-		<br><span style="font-weight: 400;">Puedes consultar los datos originales </span><a href="http://www.minfin.gob.gt/archivos/presua2015/inicio.htm"><span style="font-weight: 400;">aquí</span></a><span style="font-weight: 400;">.</span>
-		<br>
-		<br><span style="font-weight: 400;">O descargar la base de datos en formato csv </span><a href="http://www.minfin.gob.gt/archivos/presua2015/inicio.htm"><span style="font-weight: 400;">aquí</span></a><span style="font-weight: 400;">.</span>
- 
-		<ol start="2">
-			<br><li><b>  Análisis y disgregación de la información </b></li>
-		</ol>
-	 
-		<span style="font-weight: 400;">Los datos obtenidos se analizaron y distribuyeron de manera lógica en las visualizaciones y funcionalidades de la página. </span>
-		
-		<br><span style="font-weight: 400;">El primer nivel de datos se clasificó de acuerdo con lo establecido por Naciones Unidas en la Clasificación de Funciones de Gobierno (</span><a href="http://unstats.un.org/unsd/cr/registry/regcst.asp?Cl=4"><span style="font-weight: 400;">COFOG</span></a><span style="font-weight: 400;">, por sus siglas en inglés). Usar este estándar permite comparar las cifras de Guatemala con las de otros países. </span>
-	 
-		<br>
-		<br><span style="font-weight: 400;">Para el segundo nivel, es decir, la asignación presupuestaria para cada Ministerio, utilizamos un método propio diseñado dentro de Red Ciudadana, a través del cual clasificamos los servicios que cada entidad brinda y se sumaron los gasto por tipo de gasto.  Por ejemplo, un gasto del Ministerio de Educación como “compra de pintura” se ubica dentro de la clasificación de “Mantenimiento de Mobiliario”. Esto permite profundizar en los rubros sin saturar la visualización. </span>
-		
-		&nbsp;
-		<ol start="3">
-			<br><li><b>  Visualización de la información</b></li>
-		</ol>
-		<span style="font-weight: 400;">Dentro de la plataforma, los datos del presupuesto pueden visualizarse en dos secciones: <br><a href="http://adondevanmisimpuestos.gt/y-mis-impuestos.html"><span style="font-weight: 400;">“¿A dónde van mis impuestos?” <br></a><a href="http://adondevanmisimpuestos.gt/bubbletree-map.html"><span style="font-weight: 400;">“Presupuesto 2015”. </span></a>
-		
-		<br><br><span style="font-weight: 400;">En la primera, las bases de datos en formato csv nos permiten crear visualizaciones a través del sistema de Open Budget, en la cual se encuentran cargados datos sobre los presupuestos de diferentes países del mundo. </span>
-		
-		<br><br><span style="font-weight: 400;">En la segunda, los datos, clasificados de acuerdo con la COFOG, se presentan detalladamente en dos niveles de profundidad por tipo de gasto.</span>
-		
-		<br><br><span style="font-weight: 400;">Finalmente, “Arma tu presupuesto” es la funcionalidad que permite a los usuarios modificar los rubros de acuerdo con las necesidades que consideran prioritarias y compartir su propuesta a través de las redes sociales, las cuales están direccionadas a las autoridades correspondientes para que conozcan el punto de vista de los ciudadanos.</span>
-		
-		<br><br><span style="font-weight: 400;">“Arma tu presupuesto” fue diseñado por el </span><a href="https://partidodelared.org/"><span style="font-weight: 400;">Partido de la Red </span></a><span style="font-weight: 400;">en Argentina. Nosotros hemos replicado su código para poder utilizarlo en Guatemala y que podamos hacer llegar a nuestras autoridades lo que queremos que prioricen al momento de aprobarlo. </span>
-	</div>
-		&nbsp;
-		<br>
-		<br><b>FAQS Metodología </b>
-		
-		&nbsp;
-		<br>
-		<br><b>¿De dónde sale la información de esta página? </b>
-		
-		&nbsp;
-		<br>
-		<br><span style="font-weight: 400;">La información sobre el presupuesto es pública y se puede encontrar en el sitio del </span><a href="http://www.minfin.gob.gt/"><span style="font-weight: 400;">Ministerio de Finanzas</span></a><span style="font-weight: 400;">.  </span>
-		
-		&nbsp;
-		<br>
-		<br><span style="font-weight: 400;">Otros vínculos de interés:</span>
-		 
-		<br><a href="http://www.minfin.gob.gt/archivos/presua2015/inicio.htm"><span style="font-weight: 400;">- Presupuesto 2015</span></a>
-		<br><a href="http://www.minfin.gob.gt/archivos/presua2015/inicio.htm"><span style="font-weight: 400;">- Distribución del Presupuesto por Ministerio</span></a>
-		
-		&nbsp;
-		<br>
-		<br><span style="font-weight: 400;">Esta página y todas sus funcionalidades contienen la información oficial, adaptada al estándar COFOG y a un método propio de Red Ciudadana para facilitar su comprensión y visualización.  </span>
-		
-		&nbsp;
-		<br>
-		<br><b>Estos datos del presupuesto, ¿a qué etapa corresponden? </b>
-		
-		&nbsp;
-		<br>
-		<br><span style="font-weight: 400;">Esta plataforma presenta información del Presupuesto utilizado en el año 2015. Los datos que encuentras en las gráficas son datos presupuestarios y no de gasto efectivo.</span>
-		
-	</div>
-	
-<div class="container">
-  <div class="row spaced">
-    <div class="col-md-6">
-      <a href="y-mis-impuestos.html">
-        <img src="img/Cuadro1.gif" alt="¿A dónde van mis impuestos?" class="img-responsive">
-      </a>
-    </div>
-    <div class="col-md-6">
-      <a href="http://arma.adondevanmisimpuestos.gt/">
-        <img src="img/Cuadro2.gif" alt="Arma tu Presupuesto" class="img-responsive"/>
-      </a>
-    </div>
-  </div>
-  
-  <div class="container">
-  <div class="row spaced">
-    <div class="col-md-4">
-      <a href="bubbletree-map.html">
-        <img src="img/ÍCONOS/ICONOS-70.png" alt="Presupuesto 2015" style="height: 300px; width: 300px;">
-      </a>
-    </div>
-    <div class="col-md-4">
-      <a href="analisis.html">
-        <img src="img/ÍCONOS/ICONOS-71.png" alt="Presupuesto 2015" style="height: 300px; width: 300px;"/>
-      </a>
-    </div>
-    <div class="col-md-4">
-      <a href="analisis.html">
-        <img src="img/ÍCONOS/ICONOS-72.png" alt="Presupuesto 2015" style="height: 300px; width: 300px;"/>
-      </a>
-    </div>
-  </div>
+<div class="text-center">
+    <h2>Metodología</h2>
 </div>
+
+<ul id="menu-links" class="nav nav-pills nav-justified" style="font-size: 14px; margin-bottom: 25px;">
+    <li role="presentation"><a href="#proyecto">Proyecto</a></li>
+    <li role="presentation"><a href="#metodologia-faqs">Metodología y FAQs</a></li>
+    <li role="presentation"><a href="#fuentes">Fuentes y datos</a></li>
+    <li role="presentation"><a href="#redCiudadana">Quiénes somos</a></li>
+    <li role="presentation"><a href="#agradecimientos">Agradeciemientos</a></li>
+</ul>
+
+<section id="proyecto" class="row">
+
+    <h3>Proyecto: ¿A dónde van mis impuestos?</h3>
+
+    <p>
+        <strong>Acerca de:</strong> El proyecto tiene como objetivo promover la
+        transparencia y la participación ciudadana a través del análisis y la
+        visualización de información acerca del gasto público de Guatemala.
+    </p>
+
+    <p><strong>Funcionalidades</strong></p>
+    <ul>
+        <li><strong>¿A dónde van mis impuestos?</strong> Conoce como tus impuestos son invertidos por el Gobierno.</li>
+        <li><strong>Arma tu presupuesto</strong> Arma tu presupuesto y haz publica tu forma de priorizar las necesidades de nuestro pais.</li>
+        <li><strong>Obras Publicas Municipales</strong> Asigna de forma interactiva el presupuesto para las necesidades de nuestro país.</li>
+        <li><strong>Presupuestos Municipales</strong> Consulta, analiza y compara los presupuestos municipales de Guatemala.</li>
+        <li><strong>Conoce tu presupuesto:</strong> Conoce el presupuesto de egresos de Guatemala y en qué se gasta.</li>
+        <li><strong>Glosario</strong> Conoce los principales términos presupuestarios y financieros del Presupuesto.</li>
+    </ul>
+</section>
+
+<section id="metodologia-faqs" class="row">
+
+    <h3>Metodología y FAQs</h3>
+
+    <p><b>¿De dónde sale la información de esta página?</b></p>
+
+    <p>
+        La información sobre el presupuesto es pública y se puede encontrar en el
+        sitio del <a href="http://www.minfin.gob.gt/">Ministerio de Finanza</a>.
+    </p>
+
+    <p>Otros vínculos de interés</p>
+
+    <ul>
+        <li><a href="http://www.minfin.gob.gt/archivos/presua2015/inicio.htm">Presupuesto 201</a></li>
+        <li><a href="http://www.minfin.gob.gt/archivos/presua2015/inicio.htm">Distribución del Presupuesto por Ministerio</a></li>
+    </ul>
+
+    <p>
+        Esta página y todas sus funcionalidades contienen la información oficial,
+        adaptada al estándar COFOG y a un método propio de Red Ciudadana para facilitar
+        su comprensión y visualización.
+    </p>
+
+    <p><strong>Estos datos del presupuesto, ¿a qué etapa corresponden?</strong></p>
+
+    <p>
+        Esta plataforma presenta información del Presupuesto utilizado en el año
+        2015. Los datos que encuentras en las gráficas son datos presupuestarios
+        y no de gasto efectivo
+    </p>
+</section>
+
+<section id="Fuentes" class="row">
+
+    <h3>Recopilación de información sobre el Presupuesto</h3>
+
+    <p>
+        Como primer paso buscamos los datos disponibles sobre el Presupuesto General
+        de Ingresos y Egresos de la Nación. El
+        <a href="http://www.minfin.gob.gt/">Ministerio de Finanzas</a> cuenta con
+        una página web donde mantienen la información. Extrajimos los datos de la
+        página en formato html y luego los convertimos a una base de datos en formato
+        CSV.
+    </p>
+
+    <p>
+        <small>
+            Puedes <a href="http://www.minfin.gob.gt/archivos/presua2015/inicio.htm">consultar los datos originales</a>
+            o bien <a href="http://www.minfin.gob.gt/archivos/presua2015/inicio.htm">descargar la base de datos en formato CSV</a>.
+        </small>
+    </p>
+
+    <h4>Análisis y disgregación de la información</h4>
+
+    <p>Los datos obtenidos se analizaron y distribuyeron de manera lógica en las visualizaciones y funcionalidades de la página.</p>
+
+    <p>
+        El primer nivel de datos se clasificó de acuerdo con lo establecido por
+        Naciones Unidas en la Clasificación de Funciones de Gobierno (
+        <a href="http://unstats.un.org/unsd/cr/registry/regcst.asp?Cl=4">COFOG</a>,
+        por sus siglas en inglés). Usar este estándar permite comparar las cifras
+        de Guatemala con las de otros países.
+    </p>
+
+    <p>
+        Para el segundo nivel, es decir, la asignación presupuestaria para cada
+        Ministerio, utilizamos un método propio diseñado dentro de Red Ciudadana,
+        a través del cual clasificamos los servicios que cada entidad brinda y se
+        sumaron los gasto por tipo de gasto.  Por ejemplo, un gasto del Ministerio
+        de Educación como “compra de pintura” se ubica dentro de la clasificación de
+        “Mantenimiento de Mobiliario”. Esto permite profundizar en los rubros sin
+        saturar la visualización.
+    </p>
+    
+    <h4>Visualización de la información</h4>
+
+    <p>
+        Dentro de la plataforma, los datos del presupuesto pueden visualizarse en dos secciones:
+            <a href="/y-mis-impuestos.html">¿A dónde van mis impuestos?</a> y
+            <a href="/bubbletree-map.html">Presupuesto 2015</a>.
+    </p>
+
+    <p>
+        En la primera, las bases de datos en formato CSV nos permiten crear visualizaciones
+        a través del sistema de <strong>Open Budget</strong>, en la cual se encuentran cargados datos
+        sobre los presupuestos de diferentes países del mundo.
+    </p>
+
+    <p>
+        En la segunda, los datos, clasificados de acuerdo con la COFOG, se presentan
+        detalladamente en dos niveles de profundidad por tipo de gasto
+    </p>
+
+    <p>
+        Finalmente, <a href="http://arma.adondevanmisimpuestos.gt">Arma tu presupuesto</a>
+        es la funcionalidad que permite a los
+        usuarios modificar los rubros de acuerdo con las necesidades que consideran
+        prioritarias y compartir su propuesta a través de las redes sociales, las
+        cuales están direccionadas a las autoridades correspondientes para que conozcan
+        el punto de vista de los ciudadanos
+    </p>
+
+    <p>
+        <strong>Arma tu presupuesto</strong> fue diseñado por el
+        <a href="https://partidodelared.org/">Partido de la Red</a> en Argentina.
+        Nosotros hemos replicado su código para poder utilizarlo en Guatemala y
+        que podamos hacer llegar a nuestras autoridades lo que queremos que prioricen
+        al momento de aprobarlo.
+    </p>
+</section>
+
+<section id="redCiudadana" class="row">
+    <h3>Red ciudadana</h3>
+</section>
+
+<section id="agradecimientos" class="row">
+    <h3>Agradecimientos</h3>
+</section>
+
+<script>
+    $(function () {
+        $('#menu-links a').click(function(e) {
+            e.preventDefault();
+            var targetElementId = $(this).attr('href');
+
+            $('html, body').animate({
+                scrollTop: $(targetElementId).offset().top - 84
+            }, 500);
+        });
+    });
+</script>
