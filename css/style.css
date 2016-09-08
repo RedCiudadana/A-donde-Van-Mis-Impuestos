@@ -289,6 +289,14 @@ img.img-funcionario {
   border-color: #783c8f;
 }
 
+#presupuesto-general-data .monto-large {
+  font-size: 28px;
+}
+
+#presupuesto-general-data .monto-medium {
+  font-size: 24px;
+}
+
 @media (min-width: 768px){
   .responsive-banner {
     width: 780px;
@@ -296,5 +304,13 @@ img.img-funcionario {
 
   .navbar-brand {
     padding-left: 15px;
+  }
+
+  #presupuesto-general-data .monto-large {
+    font-size: 32px;
+  }
+
+  #presupuesto-general-data .monto-medium {
+    font-size: 28px;
   }
 }
