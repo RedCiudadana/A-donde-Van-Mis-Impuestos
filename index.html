@@ -3,57 +3,151 @@ layout: default
 title: Inicio
 ---
 
-<h2 class="main-header"><b>Conoce todo sobre el Presupuesto de la nación, <br>prioriza los gastos según tu perspectiva e incide en las decisiones públicas</b></h2>
+<script src="/js/tabletop.js"></script>
+<script src="/js/accounting.js"></script>
 
-<div class="row spaced">
-  <h2 class="col-md-12">
-    <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
-      <ol class="carousel-indicators">
-        <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-        <li data-target="#carousel-example-generic" data-slide-to="1"></li>
-        <li data-target="#carousel-example-generic" data-slide-to="2"></li>
-      </ol>
-
-      <!-- Wrapper for slides -->
-      <div class="carousel-inner" role="listbox">
-        
-        
-        <div class="item active">
-          <a href="http://www.adondevanmisimpuestos.gt/bubbletree-map.html#/~/root/">
-          <img src="img/SLIDER-CONOCE-TU-PRESUPUESTO.gif" alt="Conoce tu Presupuesto">
-          </a>
-        </div>
-
-        <div class="item">
-          <a href="http://www.adondevanmisimpuestos.gt/bubbletree-map.html#/~/root/">
-          <img src="img/SLIDER-CONOCE-TU-PRESUPUESTO.gif" alt="Conoce tu Presupuesto">
-          </a>
-        </div>
-        
-        
-        <div class="item">
-          <a href="http://www.adondevanmisimpuestos.gt/bubbletree-map.html#/~/root/">
-          <img src="img/SLIDER-CONOCE-TU-PRESUPUESTO.gif" alt="Conoce tu Presupuesto">
-          </a>
-        </div>
-      </div>
-
-    </div>
-  </h2>
-</div>
+<h2 class="main-header grey-text">
+  <b>
+    Conoce todo sobre el Presupuesto de la nación,
+    <br>prioriza los gastos según tu perspectiva e incide en las decisiones públicas.
+  </b>
+</h2>
 
 <div class="container">
-  <div class="row spaced">
-    <div class="col-md-6">
-      <a href="y-mis-impuestos.html">
-        <img src="img/Cuadro1.gif" alt="¿A dónde van mis impuestos?" class="img-responsive">
+  <div class="row spaced text-center grey-text">
+
+    <div id="presupuesto-general-data" class="col-md-12 heavy-spaced open-sans bold container">
+
+      <div style="font-size: 22px; background-color: #ffffff; padding: 18px;">
+        <strong>PRESUPUESTO GENERAL DE LA REPÚBLICA DE GUATEMALA</strong>
+      </div>
+
+      <div style="background-color: #414042; color: #ffffff; padding: 18px;">
+        <span id="presupuestoTotal" class="monto-large"><strong>[cargando]</strong></span>
+        <span style="font-size: 22px; margin-left: 10px;">MILLONES DE QUETZALES</span>
+      </div>
+
+      <div>
+        <div class="col-xs-12 col-md-8" style="background-color: #047b99; color: #ffffff; padding: 18px;">
+          <div class="col-md-1"></div>
+          <div class="col-md-10 text-left">
+
+            <div>GASTO DEVENGADO (Actualizado SICOIN - <span id="fechaActualizacionSicoin">[cargando]</span>)</div>
+            <div>
+              <span id="presupuestoEjecutado" class="monto-medium"><strong>[cargando]</strong></span>
+              <span style="font-size: 12px; margin-left: 10px;">MILLONES DE QUETZALES</span>
+            </div>
+
+          </div>
+          <div class="col-md-1"></div>
+        </div>
+        <div class="col-xs-12 col-md-4" style="background-color: #a7d270; color: #ffffff; padding: 18px;">
+          <div>PORCENTAJE DE EJECUCIÓN</div>
+          <div>
+            <span id="porcentajeEjecucion" class="monto-large">[cargando]</span>
+            <span style="font-size: 12px;"></span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-12 heavy-spaced">
+      <span class="underlined">
+        <strong>¿A dónde van mis impuestos?:</strong>
+        Conoce como tus impuestos son invertidos por el Gobierno.
+      </span>
+      <a href="/y-mis-impuestos.html">
+        <img
+          class="responsive-banner"
+          class="responsive-banner"
+          src="/img/index-b/a-donde-van-mis-impuestos.png"
+          alt="¿A dónde van mis impuestos?"
+        >
       </a>
     </div>
-    <div class="col-md-6">
+
+    <div class="col-md-12 heavy-spaced">
+      <span class="underlined">
+        <strong>Arma tu presupuesto:</strong>
+        Arma tu presupuesto y haz publica tu forma de priorizar las necesidades de nuestro pais.
+      </span>
       <a href="http://arma.adondevanmisimpuestos.gt/">
-        <img src="img/Cuadro2.gif" alt="Arma tu Presupuesto" class="img-responsive"/>
+        <img
+          class="responsive-banner"
+          src="/img/index-b/arma-tu-presupuesto.jpg"
+          alt="Arma tu presupuesto"
+        >
       </a>
     </div>
+<!-- 
+    <div class="col-md-12 heavy-spaced">
+      <span class="underlined">
+        <strong>Obras públicas municipales:</strong>
+        Asigna de forma interactiva el presupuesto para las necesidades de nuestro país
+      </span>
+      <a href="/mapa.html#/mapa">
+        <img
+          class="responsive-banner"
+          src="/img/index-b/proyectos-inversion-publica.png"
+          alt="Proyectos de inversión pública"
+        >
+      </a>
+    </div>
+
+    <div class="col-md-12 heavy-spaced">
+      <span class="underlined">
+        <strong>Presupuestos municipales:</strong>
+        Consulta, analiza y compara los presupuestos municipales de Guatemala.
+      </span>
+      <a href="/presupuestos-municipales.html">
+        <img
+          class="responsive-banner"
+          src="/img/index-b/alcaldes.jpg"
+          alt="Presupuestos Municipales"
+        >
+      </a>
+    </div>
+--> 
+    <div class="col-md-12 heavy-spaced">
+      <span class="underlined">
+        <strong>Conoce tu presupuesto:</strong>
+        Conoce el presupuesto de egresos de Guatemala y en qué se gasta.
+      </span>
+      <a href="/bubbletree-map.html">
+        <img
+          class="responsive-banner"
+          src="/img/index-b/conoce-tu-presupuesto.png"
+          alt="Conoce tu presupuesto"
+        >
+      </a>
+    </div>
+    
   </div>
 </div>
 
+<script>
+  $(function () {
+    // Informacion index presupuesto
+    var spreadhsheetUrl = 'https://docs.google.com/spreadsheets/d/1mJujk4sZ20361Gp1UM-hOEMGL-qwmx6N-rHJE7ydhJY/pubhtml';
+
+    Tabletop.init({
+      key: spreadhsheetUrl,
+      callback: function(data, tabletop) {
+        var dataInicial = tabletop.sheets('data-index').all();
+
+        if (dataInicial.length === 0) {
+          console.log('Error');
+
+          return;
+        }
+
+        dataInicial = dataInicial[0];
+
+        $('#presupuestoTotal').html(accounting.formatMoney(dataInicial.presupuestoTotal, "Q", 2));
+        $('#presupuestoEjecutado').html(accounting.formatMoney(dataInicial.presupuestoEjecutado, "Q", 2));
+        $('#porcentajeEjecucion').html(accounting.formatNumber(dataInicial.porcentajeEjecucion, 0) + "%");
+        $('#fechaActualizacionSicoin').html(dataInicial.fechaActualizacionSicoin);
+      }
+    });
+  });
+</script>
