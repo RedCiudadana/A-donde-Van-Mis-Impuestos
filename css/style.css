@@ -260,7 +260,8 @@ img.img-funcionario {
   text-decoration: underline;
 }
 
-.grey-text {
+.grey-text,
+.grey-text a {
   color: #414042;
 }
 
