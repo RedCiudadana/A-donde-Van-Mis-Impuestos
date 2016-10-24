@@ -294,13 +294,20 @@ img.img-funcionario {
 }
 
 #presupuesto-general-data .monto-large {
-  font-size: 28px;
+  font-size: 25px;
 }
 
 #presupuesto-general-data .monto-medium {
-  font-size: 24px;
+  font-size: 21px;
 }
 
+#container-gasto-devengado {
+  text-align: center;
+}
+
+/**
+ * Dispositivos medios para arriba
+ */
 @media (min-width: 768px) {
   .responsive-banner {
     width: 735px;
@@ -319,8 +326,20 @@ img.img-funcionario {
   }
 }
 
+/**
+ * Dispositivos medios exclusivamente
+ */
 @media (min-width: 768px) and (max-width: 992px) {
   .logo-img {
     width: 84px;
+  }
+}
+
+/**
+ * Dispositivos large para arriba
+ */
+@media (min-width: 992px) {
+  #container-gasto-devengado {
+    text-align: left;
   }
 }
