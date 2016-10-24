@@ -342,4 +342,8 @@ img.img-funcionario {
   #container-gasto-devengado {
     text-align: left;
   }
+
+  #app-graphics {
+    min-height: 700px;
+  }
 }
